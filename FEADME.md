@@ -22,6 +22,10 @@ The Source files simply define these 4 functions for the class. After looking at
 The CpuCoul is your cpu thread, and it processes cpu instructions on address space allocated by a CpuBar. It also calls VBC'c Vee function for when you require other ViB'c.
 The CpuCoul is the Coul of VBC'c. Write programs for it to execute. It's very easy to set up.
 
+In all ViB'c, wherever you see a // F or // D or // P, it signals information needed by the ViB to do what you want.
+Prior to calling the VBC'c Vee function, you instruct the CpuCoul with the pointer to the address location where this information extraction starts from.
+Just point the CpuCoul at this start location, follow the branch you want the CpuCoul to follow through the VBC'c Vee function, and add the values you need to this point like you would an array.
+
 # Explore these 4 functions carefully.
 
 They do more than simplify the Vulkan API.
@@ -42,7 +46,7 @@ You still use primitive technology don't you? kk, our face of contact sometimes 
 
 For best experience, use Android Studio, or any editor that supports: //region syntax for code folding.
 
-If you wanna help me add some more ViB to this, eg. for traditional graphics programming, tools and tricks, etc. Contact us through your spirits.
+If you want us to add some more ViB to this, eg. for traditional graphics programming, tools and tricks, etc. Contact us through your spirits.
 
 VonsBuffet.ca
 "You are the key."
