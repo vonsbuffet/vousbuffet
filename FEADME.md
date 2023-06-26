@@ -40,6 +40,8 @@ You still use primitive technology don't you? kk, our face of contact sometimes 
 
 # Extra Sauce
 
+For best experience, use Android Studio, or any editor that supports: //region syntax for code folding.
+
 If you wanna help me add some more ViB to this, eg. for traditional graphics programming, tools and tricks, etc. Contact us through your spirits.
 
 VonsBuffet.ca
