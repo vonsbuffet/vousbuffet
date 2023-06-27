@@ -34,7 +34,7 @@ Use vbcc.Be and vbcc.Vee calls, to create everything you need to get up and runn
 
 Start with a large 'empty' float array, and an iterator. (once you know your order, you will know how big to make the array)
 
-Look through the VBCc->Be branches to decide on what floats you need to make it do what you want.
+Explore VBCc->Be branches to decide on what floats you need to make it do what you want.
 </br>Do The Same for VBCc->Vee branches.
 </br>(Speed Tip: You will see a // F or // D or // P next to relevant points where you can order from. See Jeneral.cpp for the format.)
 
