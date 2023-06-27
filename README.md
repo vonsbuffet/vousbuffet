@@ -69,3 +69,5 @@ VonsBuffet.ca
 We are looking for the smartest brains on the planet.
 </br>The sooner we are united, the sooner we can take action on behalf of good and evil.
 </br>We are in this together. Everything has it's place. No1 needs to die. lol
+
+Who has the brains?
