@@ -17,13 +17,12 @@ Ce - create it.
 
 # Look Around
 
-Start by exploring the header files of each ViB; member variables explain what they do.
-</br>(Try a ViB in the Cpu directory?)
+Start by exploring ViB header files; member variables explain what they do.
 
-Header files define a class (the "ViB") that declares the 4 functions, where member variables are assigned.
-</br>The Source files define the 4 functions for the class.
+Header files define a class (the "ViB") that declares the 4 functions.
+</br>The Source files define the 4 functions for the class; where member variables are assigned.
 
-After looking at a couple ViB, you will see a pattern that will help you learn the rest.
+After a couple ViB, you will see a pattern that will help you learn the rest.
 
 (Vulkan_Wrapper and Jeneral files are extra sauce, look around them when you can.)
 
