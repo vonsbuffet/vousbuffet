@@ -11,8 +11,10 @@ void CpuKlok::Be(CpuCoul *_cpuCoul, float *&_ctepF) {
             VB0 -= 1;
 
             int RE = clock_gettime(CLOCK_MONOTONIC, &before);
-            if (RE < 0)
-                throw RE;
+            if (RE < 0){
+                _cpuCoul->RE = RE;
+                throw -1;
+            }
         }
         _ctepF = ctepF;
     }
@@ -34,8 +36,10 @@ void CpuKlok::Vee(CpuCoul *_cpuCoul, float *&_ctepF) {
                 float *klokPointF = _cpuCoul->eoBar.pointCe + VeeD(ctepF); // D
 
                 int RE = clock_gettime(CLOCK_MONOTONIC, &now);
-                if (RE < 0)
-                    throw RE;
+                if (RE < 0){
+                    _cpuCoul->RE = RE;
+                    throw -1;
+                }
 
                 // Time
                 float *klokPointF0 = klokPointF;
@@ -72,14 +76,18 @@ void CpuKlok::Vee(CpuCoul *_cpuCoul, float *&_ctepF) {
                 int64_t komaBV = VeeD(ctepF); // D
 
                 int RE = clock_gettime(CLOCK_MONOTONIC, &now);
-                if (RE < 0)
-                    throw RE;
+                if (RE < 0){
+                    _cpuCoul->RE = RE;
+                    throw -1;
+                }
 
                 before.tv_nsec = now.tv_nsec;
                 while (true) {
                     RE = clock_gettime(CLOCK_MONOTONIC, &now);
-                    if (RE < 0)
-                        throw RE;
+                    if (RE < 0){
+                        _cpuCoul->RE = RE;
+                        throw -1;
+                    }
 
                     if (now.tv_nsec > before.tv_nsec)
                         komaVB += now.tv_nsec - before.tv_nsec;
