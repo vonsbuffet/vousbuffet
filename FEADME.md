@@ -26,6 +26,10 @@ In all ViB'c, wherever you see a // F or // D or // P, it signals information ne
 Prior to calling the VBC'c Vee function, you instruct the CpuCoul with the pointer to the address location where this information extraction starts from.
 Just point the CpuCoul at this start location, follow the branch you want the CpuCoul to follow through the VBC'c Vee function, and add the values you need to this point like you would an array.
 
+I understand the CpuCoul may seem a bit complicated, but it is essentially a virtual machine that runs simplified assembly language optimized for AI.
+
+Very Fun!
+
 # Explore these 4 functions carefully.
 
 They do more than simplify the Vulkan API.
