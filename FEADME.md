@@ -7,22 +7,25 @@ Or make it into an OS itself?
 # It is very simple.
 
 VBC'c has all the cpu and gpu ViB'c you need to program.
-All the VBC'c ViB'c are used via Ce, Be, Vee, and Pec functions.
 
-Ce is to create it.
+All the ViB'c are defined via 4 functions:
 
-Be is to change it for your specific use case.
+Ce : to create it.
 
-Vee is to use it.
+Be : to change it for your specific use case.
 
-Pec is to destroy it.
+Vee : to use it.
+
+Pec : to destroy it.
 
 # Look Around
 
-Start by exploring the header files of each ViB. (VBC'c is the most complicated because it ties everything together. Try starting with another ViB in the Cpu or Gpu directories)
+Start by exploring the header files of each ViB. (VBC'c is the most complicated because it ties everything together. Try starting with a ViB in the Cpu directory?)
 
-If you explore the header files (except for Vulkan_Wrapper and Jeneral files) and you will see a class (which is the ViB)
-and each class defines these 4 function header; Member variables in the class are assigned via these functions.
+(Excluding Vulkan_Wrapper and Jeneral files; which are extra sauce) If you explore the header files you will see a class (which is the ViB)
+and each class declares the 4 functions. Member variables in the class are assigned via these functions.
+
+Very Simple. The same 4 Functions in every class!
                 
 The Source files simply define these 4 functions for the class. After looking at a couple, you will see a pattern that will help you learn the rest.
         
