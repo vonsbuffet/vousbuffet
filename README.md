@@ -27,10 +27,15 @@ The Source files simply define these 4 functions for the class. After looking at
 
 # To Start
 
-Try creating a startup routine that initializes your VBC'c using vbcc.Be and vbcc.Vee calls, to create everything you need to get up and running.
-</br>Start with an empty float array, and an iterator.
-</br>Look through the VBCc->Be branches to decide on what floats you need to make it do what you want.
-</br>Do The Same for VBCc->Vee branches. You can add this to a new array or the same one, depending on how you set up your boot routine (static array, read from file, etc.).
+Try creating a startup routine that initializes your VBC'c.
+
+Use vbcc.Be and vbcc.Vee calls, to create everything you need to get up and running.
+
+Start with an empty float array, and an iterator. (once you know your order, you will know how big to make the array)
+
+Look through the VBCc->Be branches to decide on what floats you need to make it do what you want.
+</br>Do The Same for VBCc->Vee branches. You can add this to a new array or the same one, depends on your boot routine
+</br>(const array, read from file, etc.).
 </br>You will see a // F or // D or // P next to relevant points where you can order from.
 
 You can also send your VBCc orders via a CpuCoul during runtime in the same way. Search through CpuCoul->Vee and find the "vbcc.Vee" call in the VB region. I understand the CpuCoul may seem a bit complicated, but it is essentially a virtual machine that runs simplified assembly language optimized for AI.
