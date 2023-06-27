@@ -50,7 +50,7 @@ These 4 functions emerged from Von's Buffet's special equation.
 
 The equation helped us do more than create this.
 
-We have studied the equation excessively, and this code is indeed sufficient to do more with the equation.
+We have studied the equation excessively, and this code is indeed a starting point to do more with the equation.
 
 If you need help unlocking it, please contact us through your spirits.
 
