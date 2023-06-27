@@ -43,7 +43,7 @@ You can also run orders during runtime in the same way. Search through CpuCoul->
 </br>but it is a simple virtual machine that runs virtual machine code optimized for AI.
 
 You can change the CpuCoul to be the virtual machine of your choice, and program it?
-</br>You can add a compiler ViB to compute real machine code for max performance, and jump to the raw instructions with the CpuCoul?</br>
+</br>You can add a compiler ViB to compute real machine code for max performance, and jump to the raw instructions with the CpuCoul?
 </br>Or you can learn to use our Coul, because it will give you super powers.
 
 Very Fun!
