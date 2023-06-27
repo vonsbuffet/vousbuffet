@@ -1,5 +1,5 @@
-#ifndef GpuKeGramBeGram_H
-#define GpuKeGramBeGram_H
+#ifndef GpuBarGramBeGram_H
+#define GpuBarGramBeGram_H
 
 #include "VBCc.h"
 
@@ -8,10 +8,10 @@ class CpuCoul;
 class GpuBarGramBeGram{
 public:
 
-    void Pec();
     void Ce();
     void Be(CpuCoul *_cpuCoul, float *&_ctepF);
     void Vee(CpuCoul *_cpuCoul, float *&_ctepF);
+    void Pec();
 
     int64_t VB;
     VkDevice device;
@@ -19,4 +19,4 @@ public:
     VkDescriptorSetLayout descriptorSetLayout;
 };
 
-#endif //GpuKeGramBeGram_H
+#endif //GpuBarGramBeGram_H
