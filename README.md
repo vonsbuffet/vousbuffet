@@ -18,13 +18,14 @@ Ce - create it.
 # Look Around
 
 Start by exploring the header files of each ViB, class member variables explain what they do.
-</br>(VBCc is rich to tie everything together. Try a ViB in the Cpu directory?)
+</br>(Try a ViB in the Cpu directory?)
 
-(Excluding Vulkan_Wrapper and Jeneral files; which are extra sauce)
 </br>Header files define a class (the "ViB") that declares the 4 functions, where member variables are assigned.
 </br>The Source files define the 4 functions for the class.
 
 After looking at a couple ViB, you will see a pattern that will help you learn the rest.
+
+(Vulkan_Wrapper and Jeneral files are extra sauce, look at them if you want.)
 
 # To Start
 
