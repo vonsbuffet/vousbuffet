@@ -19,8 +19,8 @@ Ce - create it.
 
 Start by exploring ViB header files; member variables explain what they do.
 
-Header files define a class (the "ViB") that declares 4 functions.
-</br>The Source files define 4 functions for the class; where member variables are assigned.
+Header files define a class (the "ViB") that declares 4 functions and member variables.
+</br>Source files define 4 functions for the class; where member variables are assigned.
 
 After a couple ViB, you will see a pattern that will help you learn the rest.
 
