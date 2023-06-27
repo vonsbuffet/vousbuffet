@@ -68,10 +68,10 @@ You still use primitive technology? kk, our contact can use email: TheVoniestMic
 
 For best experience, use Android Studio, or any editor that supports code folding via: "//region //endregion" syntax.
 
-If you want us to add some more ViB to this, eg. for traditional graphics programming, tools and tricks, etc. Contact us through your spirits.
+If you want us to add more ViB to this, eg. for traditional graphics programming, tools and tricks, etc. Contact us through your spirits.
 
 VonsBuffet.ca
-"You are the key."
+</br>"You are the key."
 
 # Smart Flex
 
