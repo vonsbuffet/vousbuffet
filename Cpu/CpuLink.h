@@ -1,11 +1,7 @@
-//
-// Link your plug. Lets get it...
-//
-
 #ifndef CpuLink_H
 #define CpuLink_H
 
-#include <ViBer.h>
+#include <VBCc.h>
 
 #include <unistd.h>
 #include <sys/socket.h>
@@ -15,18 +11,15 @@
 #include <arpa/inet.h>
 
 
-class ViBer;
 class CpuCoul;
 
 class CpuLink{
 public:
-    CpuLink();
-    ~CpuLink();
 
-    void Pec();
     void Ce();
-    void Be(VBCc *_viBer, CpuCoul *_cpuCoul, float *&_ctepF);
-    void Vee(VBCc *_viBer, CpuCoul *_cpuCoul, float *&_ctepF);
+    void Be(CpuCoul *_cpuCoul, float *&_ctepF);
+    void Vee(CpuCoul *_cpuCoul, float *&_ctepF);
+    void Pec();
 
     int64_t VB;
     float VB1PeCe;
