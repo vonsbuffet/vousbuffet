@@ -20,10 +20,8 @@ Ce - create it.
 Start by exploring the header files of each ViB.
 (VBC'c is the most complicated because it ties everything together. Try starting with a ViB in the Cpu directory?)
 
-(Excluding Vulkan_Wrapper and Jeneral files; which are extra sauce) If you explore the header files you will see a class (which is the ViB)
-and each class declares the 4 functions.
-
-Member variables are assigned via these functions.
+(Excluding Vulkan_Wrapper and Jeneral files; which are extra sauce) You will see a class (the "ViB")
+and each class declares the 4 functions, where member vairables are assigned.
                 
 The Source files define the 4 functions for the class.
 
