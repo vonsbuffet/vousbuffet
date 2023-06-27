@@ -1,7 +1,7 @@
 #ifndef CpuLink_H
 #define CpuLink_H
 
-#include <VBCc.h>
+#include "VBCc.h"
 
 #include <unistd.h>
 #include <sys/socket.h>
