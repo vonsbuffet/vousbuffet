@@ -27,15 +27,18 @@ Start by exploring the header files of each ViB.
 and each class declares the 4 functions. Member variables in the class are assigned via these functions.
                 
 The Source files simply define these 4 functions for the class. After looking at a couple, you will see a pattern that will help you learn the rest.
-        
-The CpuCoul is your cpu thread, and it processes cpu instructions on address space allocated by a CpuBar. It also calls VBC'c Vee function for when you require other ViB'c.
-The CpuCoul is the Coul of VBC'c. Write programs for it to execute. It's very easy to set up.
 
-In all ViB'c, wherever you see a // F or // D or // P, it signals information needed by the ViB to do what you want.
-Prior to calling the VBC'c Vee function, you instruct the CpuCoul with the pointer to the address location where this information extraction starts from.
-Just point the CpuCoul at this start location, follow the branch you want the CpuCoul to follow through the VBC'c Vee function, and add the values you need to this point like you would an array.
+# To Start
 
-I understand the CpuCoul may seem a bit complicated, but it is essentially a virtual machine that runs simplified assembly language optimized for AI.
+Try creating a startup routine that initializes the VBC'c with Be and Vee calls, to create everything you need to get up and running.
+</br>Start with an empty float array, and an iterator.
+</br>Look through the VBCc->Be branches to decide on what floats you need to make it do what you want.
+</br>Do The Same for VBCc->Vee branches. You can add this to a new array or the same one, depending on how you set up your boot routine (static array, read from file, etc.).
+</br>You will see a // F or // D or // P next to relevant points where you can order from.
+
+You can also send your VBCc orders via CpuCoul during runtime in the same way. Search through CpuCoul->Vee and find the "vbcc.Vee" call in the VB region. I understand the CpuCoul may seem a bit complicated, but it is essentially a virtual machine that runs simplified assembly language optimized for AI.
+
+Thus change the CpuCoul to be the virtual machine of your choice, and program it. Or learn to use ours, because we know what we're doing.
 
 Very Fun!
 
@@ -45,9 +48,9 @@ They do more than simplify the Vulkan API.
 
 These 4 functions emerged from Von's Buffet's special equation.
 
-The equation helped us do more than create this (which is essentially an operating system framework).
+The equation helped us do more than create this.
 
-We have studied the equation excessively. And built systems using this code as a starting point.
+We have studied the equation excessively, and this code is indeed sufficient to do more with the equation.
 
 If you need help unlocking it, please contact us through your spirits.
 
