@@ -66,7 +66,7 @@ You still use primitive technology? kk, our contact can use email: TheVoniestMic
 
 # Extra Sauce
 
-For best experience, use Android Studio, or any editor that supports code folding via: "//region //endregion" syntax.
+For best experience, use Android Studio, or any editor that supports code folding via: '//region' syntax.
 
 If you want us to add more ViB to this, eg. for traditional graphics programming, tools and tricks, etc. Contact us through your spirits.
 
