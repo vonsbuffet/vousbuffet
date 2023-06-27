@@ -18,10 +18,11 @@ Ce - create it.
 # Look Around
 
 Start by exploring the header files of each ViB.
-(VBC'c is the most complicated because it ties everything together. Try starting with a ViB in the Cpu directory?)
+(VBC'c are most rich, and tie everything together. Try starting with a ViB in the Cpu directory?)
 
-(Excluding Vulkan_Wrapper and Jeneral files; which are extra sauce) You will see a class (the "ViB")
-and each class declares the 4 functions, where member vairables are assigned.
+(Excluding Vulkan_Wrapper and Jeneral files; which are extra sauce)
+</br>You will see a class (the "ViB")
+</br>and each class declares the 4 functions, where member variables are assigned.
                 
 The Source files define the 4 functions for the class.
 
@@ -33,7 +34,7 @@ Try creating a startup routine that initializes your VBC'c.
 
 Use vbcc.Be and vbcc.Vee calls, to create everything you need to get up and running.
 
-Start with an empty float array, and an iterator. (once you know your order, you will know how big to make the array)
+Start with a large 'empty' float array, and an iterator. (once you know your order, you will know how big to make the array)
 
 Look through the VBCc->Be branches to decide on what floats you need to make it do what you want.
 </br>Do The Same for VBCc->Vee branches. You can add this to a new array or the same one, depends on your boot routine
@@ -64,7 +65,7 @@ You still use primitive technology don't you? kk, our contact may use email: The
 
 # Extra Sauce
 
-For best experience, use Android Studio, or any editor that supports: //region syntax for code folding.
+For best experience, use Android Studio, or any editor that supports code folding via: "//region //endregion" syntax.
 
 If you want us to add some more ViB to this, eg. for traditional graphics programming, tools and tricks, etc. Contact us through your spirits.
 
