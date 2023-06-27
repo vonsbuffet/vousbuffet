@@ -10,13 +10,10 @@ VBC'c has all the cpu and gpu ViB'c you need to program.
 
 All the ViB'c are defined via 4 functions:
 
-Ce : to create it.
-
-Be : to change it for your specific use case.
-
-Vee : to use it.
-
-Pec : to destroy it.
+Ce - create it.
+</br>Be - change it for your specific use case.
+</br>Vee - use it.
+</br>Pec - destroy it.
 
 # Look Around
 
