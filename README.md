@@ -38,7 +38,7 @@ Look through the VBCc->Be branches to decide on what floats you need to make it 
 </br>(const array, read from file, etc.).
 </br>You will see a // F or // D or // P next to relevant points where you can order from.
 
-You can also send your VBCc orders via a CpuCoul during runtime in the same way. Search through CpuCoul->Vee and find the "vbcc.Vee" call in the VB region. I understand the CpuCoul may seem a bit complicated, but it is essentially a virtual machine that runs simplified assembly language optimized for AI.
+You can also run your VBC'c orders during runtime in the same way. Search through CpuCoul->Vee and find the "vbcc.Vee" call in the VB region. I understand the CpuCoul may seem a bit complicated, but it is essentially a virtual machine that runs simplified assembly language optimized for AI.
 
 Thus change the CpuCoul to be the virtual machine of your choice, and program it. Or learn to use ours, because we know what we're doing.
 
