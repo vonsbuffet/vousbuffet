@@ -10,9 +10,16 @@ VBC'c has all the cpu and gpu ViB'c you need to program.
 All the VBC'c ViB'c are used via Ce, Be, Vee, and Pec functions.
 
 Ce is to create it.
+
 Be is to change it for your specific use case.
+
 Vee is to use it.
+
 Pec is to destroy it.
+
+# Look Around
+
+Start by exploring the header files of each ViB. (VBC'c is the most complicated because it ties everything together. Try starting with another ViB in the Cpu or Gpu directories)
 
 If you explore the header files (except for Vulkan_Wrapper and Jeneral files) and you will see a class (which is the ViB)
 and each class defines these 4 function header; Member variables in the class are assigned via these functions.
