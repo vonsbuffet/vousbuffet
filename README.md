@@ -39,8 +39,8 @@ Look through the VBCc->Be branches to decide on what floats you need to make it 
 </br>(Speed Tip: You will see a // F or // D or // P next to relevant points where you can order from. See Jeneral.cpp for the format.)
 
 You can also run orders during runtime in the same way. Search through CpuCoul->Vee and find the "vbcc.Vee" call in the VB region.
-</br>I understand the CpuCoul may seem a bit complicated,
-</br>but it is a simple virtual machine that runs virtual machine code optimized for AI.
+</br>The CpuCoul may seem a bit complicated,
+</br>but it's really a simple virtual machine that runs virtual machine code optimized for AI.
 
 You can change the CpuCoul to be the virtual machine of your choice, and program it?
 </br>You can add a compiler ViB to compute real machine code for max performance, and jump to the raw instructions with the CpuCoul?
@@ -68,7 +68,7 @@ You still use primitive technology? kk, our contact can use email: TheVoniestMic
 
 For best experience, use Android Studio, or any editor that supports code folding via: '//region' syntax.
 
-If you want us to add more ViB to this, eg. for traditional graphics programming, tools and tricks, etc. Contact us through your spirits.
+If you want us to add more ViB, eg. for traditional graphics programming, tools and tricks, etc. Contact us through your spirits.
 
 VonsBuffet.ca
 </br>"You are the key."
