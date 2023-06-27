@@ -1,4 +1,3 @@
-
 #include "CpuCoul.h"
 
 // Extra Sauce
@@ -6,46 +5,6 @@ void *CpuCoulUne(void * _cpuCoul){
     CpuCoul *cpuCoul = (CpuCoul *)_cpuCoul;
     cpuCoul->Vee(nullptr, nullPointerF);
     return nullptr;
-}
-int64_t coulKomaVB = 0;
-void CoulKomaCe(CpuCoul *_cpuCoul, EoBarCpuCoul *_eoBar){
-
-    if (coulKomaVB == 0){
-        CpuCoul *cpuCoulc = vbcc.cpuCoulc;
-        int64_t coulLimit = _eoBar->pointVee[VeeCpacerVPxVeeCtepI] / VPxVeeCtepI;
-        int64_t coulCtep = 0;
-        while (coulCtep < coulLimit){
-            CpuCoul *cpuCoul = cpuCoulc + coulCtep;
-
-            if (cpuCoul != _cpuCoul && cpuCoul->VB != 0){
-                cpuCoul->komaVB = cpuCoul->veeVB;
-                cpuCoul->veeVB = -2;
-                while (cpuCoul->ViB == ViBCe);
-            }
-
-            ++coulCtep;
-        }
-    }
-    coulKomaVB += 1;
-}
-void CoulKomaPec(CpuCoul *_cpuCoul, EoBarCpuCoul *_eoBar){
-
-    if (coulKomaVB == 1){
-        CpuCoul *cpuCoulc = vbcc.cpuCoulc;
-        int64_t coulLimit = _eoBar->pointVee[VeeCpacerVPxVeeCtepI] / VPxVeeCtepI;
-        int64_t coulCtep = 0;
-        while (coulCtep < coulLimit){
-            CpuCoul *cpuCoul = cpuCoulc + coulCtep;
-
-            if (cpuCoul != _cpuCoul && cpuCoul->VB != 0){
-                cpuCoul->veeVB = cpuCoul->komaVB;
-                while (cpuCoul->ViB == ViBPec);
-            }
-
-            ++coulCtep;
-        }
-    }
-    coulKomaVB -= 1;
 }
 // Enough Sauce!
 
@@ -83,14 +42,10 @@ void CpuCoul::Be(CpuCoul *_cpuCoul, float *&_ctepF) {
             Ce();
 
             //region Multe
-            eoBar.pointVee = (int32_t *)VeeP(ctepF); // P
-            eoBar.limitVee = (int32_t)VeeD(ctepF); // D
-            eoBar.pointBe = (int32_t *)VeeP(ctepF); // P
-            eoBar.limitBe = (int32_t)VeeD(ctepF); // D
-            eoBar.pointCe = (float *)VeeP(ctepF); // P
-            eoBar.limitCe = (int32_t)VeeD(ctepF); // D
+            pointI = (int32_t *)VeeP(ctepF); // P
+            pointF = (float *)VeeP(ctepF); // P
 
-            vPxVeePointI = &(eoBar.pointVee[VeeD(ctepF)]); // D
+            veePointI = &(pointI[VeeD(ctepF)]); // D
             //endregion
         }
         if (VB0 >= 1) {
@@ -100,14 +55,14 @@ void CpuCoul::Be(CpuCoul *_cpuCoul, float *&_ctepF) {
             Ce();
 
             //region Une
-            eoBar.pointVee = (int32_t *)VeeP(ctepF); // P
+            pointI = (int32_t *)VeeP(ctepF); // P
             eoBar.limitVee = (int32_t)VeeD(ctepF); // D
             eoBar.pointBe = (int32_t *)VeeP(ctepF); // P
             eoBar.limitBe = (int32_t)VeeD(ctepF); // D
-            eoBar.pointCe = (float *)VeeP(ctepF); // P
+            pointF = (float *)VeeP(ctepF); // P
             eoBar.limitCe = (int32_t)VeeD(ctepF); // D
 
-            vPxVeePointI = &(eoBar.pointVee[VeeD(ctepF)]); // D
+            veePointI = &(pointI[VeeD(ctepF)]); // D
 
             veeVB = VeeD(ctepF); // D
 
@@ -134,7 +89,6 @@ void CpuCoul::Vee(CpuCoul *_cpuCoul, float *&_ctepF) {
             veeVB = VeeD(ctepF); // D
         }
 
-        int32_t *vPxVeeBGramVee0PointI = vPxVeePointI + VPxVeeBGramVee0PointI;
         while (true){
             if (veeVB != 0){
                 if (veeVB > 0){
@@ -157,73 +111,73 @@ void CpuCoul::Vee(CpuCoul *_cpuCoul, float *&_ctepF) {
                 }
             }
             //region CpuGram
-            int32_t bGramVee0PointI = *vPxVeeBGramVee0PointI;
+            int32_t vee0PointI = *veePointI;
 
-            int32_t bGramVee0CtepI = bGramVee0PointI + 2;
-            int32_t vbBV = eoBar.pointVee[bGramVee0CtepI++];
+            int32_t vee0CtepI = vee0PointI + 2;
+            int32_t vbBV = pointI[vee0CtepI++];
             int32_t bvVB = 0;
-            int32_t bioCtepLimit = eoBar.pointVee[bGramVee0CtepI++];
-            while (bGramVee0CtepI <= bioCtepLimit){
+            int32_t bioCtepLimit = pointI[vee0CtepI++];
+            while (vee0CtepI <= bioCtepLimit){
                 //region BV
-                int32_t bvViB = eoBar.pointVee[bGramVee0CtepI++];
+                int32_t bvViB = pointI[vee0CtepI++];
                 if (bvViB <= BVFLimit){
                     //region F
-                    int32_t veePoint = eoBar.pointVee[bGramVee0CtepI++];
-                    int32_t vee0Point = eoBar.pointVee[bGramVee0CtepI++];
+                    int32_t veePoint = pointI[vee0CtepI++];
+                    int32_t vee0Point = pointI[vee0CtepI++];
 
-                    float veeTru = eoBar.pointCe[veePoint];
-                    float vee0Tru = eoBar.pointCe[vee0Point];
+                    float vee = pointF[veePoint];
+                    float vee0 = pointF[vee0Point];
 
                     if (bvViB == BVFNE)
-                        bvVB += (veeTru != vee0Tru);
+                        bvVB += (vee != vee0);
                     else if (bvViB == BVFE)
-                        bvVB += (veeTru == vee0Tru);
+                        bvVB += (vee == vee0);
                     else if (bvViB == BVFGE)
-                        bvVB += (veeTru >= vee0Tru);
+                        bvVB += (vee >= vee0);
                     else if (bvViB == BVFG)
-                        bvVB += (veeTru > vee0Tru);
+                        bvVB += (vee > vee0);
                     //endregion
                 }
                 else if (bvViB <= BVDLimit){
                     //region D
-                    int32_t veePoint = eoBar.pointVee[bGramVee0CtepI++];
-                    int32_t vee0Point = eoBar.pointVee[bGramVee0CtepI++];
+                    int32_t veePoint = pointI[vee0CtepI++];
+                    int32_t vee0Point = pointI[vee0CtepI++];
 
-                    int64_t veeTru = (int64_t)(eoBar.pointCe[veePoint]) + 16777216 * (int64_t)(eoBar.pointCe[veePoint + 1]);
-                    int64_t vee0Tru = (int64_t)(eoBar.pointCe[vee0Point]) + 16777216 * (int64_t)(eoBar.pointCe[vee0Point + 1]);
+                    int64_t vee = (int64_t)(pointF[veePoint]) + 16777216 * (int64_t)(pointF[veePoint + 1]);
+                    int64_t vee0 = (int64_t)(pointF[vee0Point]) + 16777216 * (int64_t)(pointF[vee0Point + 1]);
 
                     if (bvViB == BVDNE)
-                        bvVB += (veeTru != vee0Tru);
+                        bvVB += (vee != vee0);
                     else if (bvViB == BVDE)
-                        bvVB += (veeTru == vee0Tru);
+                        bvVB += (vee == vee0);
                     else if (bvViB == BVDGE)
-                        bvVB += (veeTru >= vee0Tru);
+                        bvVB += (vee >= vee0);
                     else if (bvViB == BVDG)
-                        bvVB += (veeTru > vee0Tru);
+                        bvVB += (vee > vee0);
                     //endregion
                 }
                 else if (bvViB <= BVKLimit){
                     //region K
-                    int64_t veePoint = eoBar.pointVee[bGramVee0CtepI++];
-                    int64_t vee0Point = eoBar.pointVee[bGramVee0CtepI++];
-                    int64_t veeLimitPoint = eoBar.pointVee[bGramVee0CtepI++];
-                    int32_t pointVB = eoBar.pointVee[bGramVee0CtepI++];
+                    int64_t veePoint = pointI[vee0CtepI++];
+                    int64_t vee0Point = pointI[vee0CtepI++];
+                    int64_t veeLimitPoint = pointI[vee0CtepI++];
+                    int32_t pointVB = pointI[vee0CtepI++];
 
                     if (pointVB >= 2){
                         pointVB -= 2;
 
-                        veePoint = (int64_t)eoBar.pointCe[veePoint] + 16777216 * (int64_t)eoBar.pointCe[veePoint + 1];
+                        veePoint = (int64_t)pointF[veePoint] + 16777216 * (int64_t)pointF[veePoint + 1];
                     }
                     if (pointVB >= 1){
 
-                        vee0Point = (int64_t)eoBar.pointCe[vee0Point] + 16777216 * (int64_t)eoBar.pointCe[vee0Point + 1];
+                        vee0Point = (int64_t)pointF[vee0Point] + 16777216 * (int64_t)pointF[vee0Point + 1];
                     }
-                    int64_t veePointLimit = veePoint + (int64_t)eoBar.pointCe[veeLimitPoint] + 16777216 * (int64_t)eoBar.pointCe[veeLimitPoint + 1];
+                    int64_t veePointLimit = veePoint + (int64_t)pointF[veeLimitPoint] + 16777216 * (int64_t)pointF[veeLimitPoint + 1];
 
                     if (bvViB == BVKNE){
                         //region !=
                         while (veePoint < veePointLimit){
-                            if (eoBar.pointCe[veePoint] != eoBar.pointCe[vee0Point]){
+                            if (pointF[veePoint] != pointF[vee0Point]){
                                 ++veePoint;
                                 ++vee0Point;
                                 continue;
@@ -237,7 +191,7 @@ void CpuCoul::Vee(CpuCoul *_cpuCoul, float *&_ctepF) {
                     else if (bvViB == BVKE){
                         //region ==
                         while (veePoint < veePointLimit){
-                            if (eoBar.pointCe[veePoint] == eoBar.pointCe[vee0Point]){
+                            if (pointF[veePoint] == pointF[vee0Point]){
                                 ++veePoint;
                                 ++vee0Point;
                                 continue;
@@ -251,7 +205,7 @@ void CpuCoul::Vee(CpuCoul *_cpuCoul, float *&_ctepF) {
                     else if (bvViB == BVKGE){
                         //region >=
                         while (veePoint < veePointLimit){
-                            if (eoBar.pointCe[veePoint] >= eoBar.pointCe[vee0Point]){
+                            if (pointF[veePoint] >= pointF[vee0Point]){
                                 ++veePoint;
                                 ++vee0Point;
                                 continue;
@@ -265,7 +219,7 @@ void CpuCoul::Vee(CpuCoul *_cpuCoul, float *&_ctepF) {
                     else if (bvViB == BVFG){
                         //region >
                         while (veePoint < veePointLimit){
-                            if (eoBar.pointCe[veePoint] > eoBar.pointCe[vee0Point]){
+                            if (pointF[veePoint] > pointF[vee0Point]){
                                 ++veePoint;
                                 ++vee0Point;
                                 continue;
@@ -282,24 +236,24 @@ void CpuCoul::Vee(CpuCoul *_cpuCoul, float *&_ctepF) {
             }
             //
             int32_t linkViB = (int32_t)(bvVB >= vbBV);
-            *vPxVeeBGramVee0PointI = eoBar.pointVee[bGramVee0PointI + linkViB];
+            *veePointI = pointI[vee0PointI + linkViB];
             //
-            bioCtepLimit = eoBar.pointVee[bGramVee0CtepI++] * linkViB;
-            while(bGramVee0CtepI <= bioCtepLimit){
+            bioCtepLimit = pointI[vee0CtepI++] * linkViB;
+            while(vee0CtepI <= bioCtepLimit){
                 //region VB
-                int32_t vbViB = eoBar.pointVee[bGramVee0CtepI++];
+                int32_t vbViB = pointI[vee0CtepI++];
                 if (vbViB <= VBFLimit){
                     //region F
-                    int32_t bePoint = eoBar.pointVee[bGramVee0CtepI++];
-                    int32_t veePoint = eoBar.pointVee[bGramVee0CtepI++];
-                    int32_t vee0Point = eoBar.pointVee[bGramVee0CtepI++];
-                    int32_t veePointLimit = eoBar.pointVee[bGramVee0CtepI++];
-                    int32_t strainViB = eoBar.pointVee[bGramVee0CtepI++];
+                    int32_t bePoint = pointI[vee0CtepI++];
+                    int32_t veePoint = pointI[vee0CtepI++];
+                    int32_t vee0Point = pointI[vee0CtepI++];
+                    int32_t veePointLimit = pointI[vee0CtepI++];
+                    int32_t strainViB = pointI[vee0CtepI++];
 
-                    double be = eoBar.pointCe[bePoint];
+                    double be = pointF[bePoint];
                     double be0 = 0.0;
                     //region Vee
-                    do { be0 += eoBar.pointCe[veePoint++] * eoBar.pointCe[vee0Point++]; }
+                    do { be0 += pointF[veePoint++] * pointF[vee0Point++]; }
                     while (veePoint < veePointLimit);
                     //endregion
                     //region Be
@@ -331,22 +285,22 @@ void CpuCoul::Vee(CpuCoul *_cpuCoul, float *&_ctepF) {
                         }
                     }
                     //endregion
-                    eoBar.pointCe[bePoint] = (float)be;
+                    pointF[bePoint] = (float)be;
                     //endregion
                 }
                 else if (vbViB <= VBDLimit){
                     //region D
-                    int32_t bePoint = eoBar.pointVee[bGramVee0CtepI++];
-                    int32_t veePoint = eoBar.pointVee[bGramVee0CtepI++];
-                    int32_t vee0Point = eoBar.pointVee[bGramVee0CtepI++];
-                    int32_t veePointLimit = eoBar.pointVee[bGramVee0CtepI++];
+                    int32_t bePoint = pointI[vee0CtepI++];
+                    int32_t veePoint = pointI[vee0CtepI++];
+                    int32_t vee0Point = pointI[vee0CtepI++];
+                    int32_t veePointLimit = pointI[vee0CtepI++];
 
-                    int64_t be = (int64_t)(eoBar.pointCe[bePoint]) + 16777216 * (int64_t)(eoBar.pointCe[bePoint + 1]);
+                    int64_t be = (int64_t)(pointF[bePoint]) + 16777216 * (int64_t)(pointF[bePoint + 1]);
                     int64_t be0 = 0;
                     //region Vee
                     do {
-                        int64_t vee = (int64_t)(eoBar.pointCe[veePoint]) + 16777216 * (int64_t)(eoBar.pointCe[veePoint + 1]);
-                        int64_t vee0 = (int64_t)(eoBar.pointCe[vee0Point]) + 16777216 * (int64_t)(eoBar.pointCe[vee0Point + 1]);
+                        int64_t vee = (int64_t)(pointF[veePoint]) + 16777216 * (int64_t)(pointF[veePoint + 1]);
+                        int64_t vee0 = (int64_t)(pointF[vee0Point]) + 16777216 * (int64_t)(pointF[vee0Point + 1]);
                         be0 += vee * vee0;
 
                         veePoint += 2;
@@ -373,78 +327,56 @@ void CpuCoul::Vee(CpuCoul *_cpuCoul, float *&_ctepF) {
                         be = be % be0;
                     }
                     //endregion
-                    eoBar.pointCe[bePoint] = (float)(be % 16777216);
-                    eoBar.pointCe[bePoint + 1] = (float)(be / 16777216);
+                    pointF[bePoint] = (float)(be % 16777216);
+                    pointF[bePoint + 1] = (float)(be / 16777216);
                     //endregion
                 }
                 else if (vbViB <= VBKLimit) {
                     //region K
-                    int64_t bePoint = eoBar.pointVee[bGramVee0CtepI++];
-                    int64_t veePoint = eoBar.pointVee[bGramVee0CtepI++];
-                    int64_t veeLimitPoint = eoBar.pointVee[bGramVee0CtepI++];
-                    int32_t pointVB = eoBar.pointVee[bGramVee0CtepI++];
+                    int64_t bePoint = pointI[vee0CtepI++];
+                    int64_t veePoint = pointI[vee0CtepI++];
+                    int64_t veeLimitPoint = pointI[vee0CtepI++];
+                    int32_t pointVB = pointI[vee0CtepI++];
 
                     if (pointVB >= 2){
                         pointVB -= 2;
 
-                        veePoint = (int64_t)eoBar.pointCe[veePoint] + 16777216 * (int64_t)eoBar.pointCe[veePoint + 1];
+                        veePoint = (int64_t)pointF[veePoint] + 16777216 * (int64_t)pointF[veePoint + 1];
                     }
                     if (pointVB >= 1){
                         //pointVB -= 1;
 
-                        bePoint = (int64_t)eoBar.pointCe[bePoint] + 16777216 * (int64_t)eoBar.pointCe[bePoint + 1];
+                        bePoint = (int64_t)pointF[bePoint] + 16777216 * (int64_t)pointF[bePoint + 1];
                     }
 
-                    int64_t veePointLimit = veePoint + (int64_t)eoBar.pointCe[veeLimitPoint] + 16777216 * (int64_t)eoBar.pointCe[veeLimitPoint + 1];
+                    int64_t veePointLimit = veePoint + (int64_t)pointF[veeLimitPoint] + 16777216 * (int64_t)pointF[veeLimitPoint + 1];
 
-                    if (vbViB == VBKCC) {
-                        //region Ce->Ce
+                    if (vbViB == VBKFF) {
+                        //region F->F
                         do {
-                            eoBar.pointCe[bePoint] = eoBar.pointCe[veePoint];
+                            pointF[bePoint] = pointF[veePoint];
 
                             veePoint += 1;
                             bePoint += 1;
                         } while (veePoint < veePointLimit);
                         //endregion
                     }
-                    else if (vbViB == VBKCB){
-                        //region Ce->Be
+                    else if (vbViB == VBKFI){
+                        //region F->I
                         do {
-                            eoBar.pointBe[bePoint] = (int32_t)(eoBar.pointCe[veePoint]) + 16777216 * (int32_t)(eoBar.pointCe[veePoint + 1]);
+                            pointI[bePoint] = (int32_t)(pointF[veePoint]) + 16777216 * (int32_t)(pointF[veePoint + 1]);
 
                             veePoint += 2;
                             bePoint += 1;
                         } while (veePoint < veePointLimit);
                         //endregion
                     }
-                    else if (vbViB == VBKCV){
-                        //region Ce->Vee
+                    else if (vbViB == VBKIF){
+                        //region I->F
                         do {
-                            eoBar.pointVee[bePoint] = (int32_t)(eoBar.pointCe[veePoint]) + 16777216 * (int32_t)(eoBar.pointCe[veePoint + 1]);
-
-                            veePoint += 2;
-                            bePoint += 1;
-                        } while (veePoint < veePointLimit);
-                        //endregion
-                    }
-                    else if (vbViB == VBKBC){
-                        //region Be->Ce
-                        do {
-                            int veeI = eoBar.pointBe[veePoint];
-                            eoBar.pointCe[bePoint] = float(veeI % 16777216);
-                            eoBar.pointCe[bePoint + 1] = float(veeI / 16777216);
-
-                            veePoint += 1;
-                            bePoint += 2;
-                        } while (veePoint < veePointLimit);
-                        //endregion
-                    }
-                    else if (vbViB == VBKVC){
-                        //region Vee->Ce
-                        do {
-                            int veeI = eoBar.pointVee[veePoint];
-                            eoBar.pointCe[bePoint] = float(veeI % 16777216);
-                            eoBar.pointCe[bePoint + 1] = float(veeI / 16777216);
+                            int veeI = pointI[veePoint];
+                            pointF[bePoint] = float(veeI % 16777216);
+                            pointF[bePoint + 1] = float(veeI / 16777216);
 
                             veePoint += 1;
                             bePoint += 2;
@@ -455,23 +387,23 @@ void CpuCoul::Vee(CpuCoul *_cpuCoul, float *&_ctepF) {
                 }
                 else if (vbViB <= VBVLimit){
                     //region VBCc
-                    int64_t bePoint = eoBar.pointVee[bGramVee0CtepI++];
-                    int64_t veePoint = eoBar.pointVee[bGramVee0CtepI++];
-                    int64_t pointVB = eoBar.pointVee[bGramVee0CtepI++];
+                    int64_t bePoint = pointI[vee0CtepI++];
+                    int64_t veePoint = pointI[vee0CtepI++];
+                    int64_t pointVB = pointI[vee0CtepI++];
 
                     if (pointVB >= 2){
                         pointVB -= 2;
 
-                        veePoint = (int64_t)eoBar.pointCe[veePoint] + 16777216 * (int64_t)eoBar.pointCe[veePoint + 1];
+                        veePoint = (int64_t)pointF[veePoint] + 16777216 * (int64_t)pointF[veePoint + 1];
                     }
                     if (pointVB >= 1){
                         //pointVB -= 1;
 
-                        bePoint = (int64_t)eoBar.pointCe[bePoint] + 16777216 * (int64_t)eoBar.pointCe[bePoint + 1];
+                        bePoint = (int64_t)pointF[bePoint] + 16777216 * (int64_t)pointF[bePoint + 1];
                     }
 
-                    bePointF = (eoBar.pointCe + bePoint);
-                    float *ctepF0 = (eoBar.pointCe + veePoint);
+                    bePointF = (pointF + bePoint);
+                    float *ctepF0 = (pointF + veePoint);
                     vbcc.Vee(this, ctepF0);
                     //endregion
                 }
