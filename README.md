@@ -36,7 +36,7 @@ Start with a large 'empty' float array, and an iterator. (once you know your ord
 
 Look through the VBCc->Be branches to decide on what floats you need to make it do what you want.
 </br>Do The Same for VBCc->Vee branches.
-</br>You will see a // F or // D or // P next to relevant points where you can order from.
+</br>(Speed Tip: You will see a // F or // D or // P next to relevant points where you can order from.)
 
 You can also run orders during runtime in the same way. Search through CpuCoul->Vee and find the "vbcc.Vee" call in the VB region.
 </br>I understand the CpuCoul may seem a bit complicated,
