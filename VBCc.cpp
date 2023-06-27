@@ -34,41 +34,11 @@ void VBCc::Be(CpuCoul *_cpuCoul, float *&_ctepF){
             while (cpuBiteCtep < cpuBiteLimit)
                 (cpuBitec + cpuBiteCtep++)->Ce();
             //
-            cpuBrainLimit = VeeD(ctepF); // D
-            cpuBrainc = (CpuBrain *)new char[cpuBrainLimit * sizeof(CpuBrain)];
-            int64_t cpuBrainCtep = 0;
-            while (cpuBrainCtep < cpuBrainLimit)
-                (cpuBrainc + cpuBrainCtep++)->Ce();
-            //
-            cpuBuildLimit = VeeD(ctepF); // D
-            cpuBuildc = (CpuBuild *)new char[cpuBuildLimit * sizeof(CpuBuild)];
-            int64_t cpuBuildCtep = 0;
-            while (cpuBuildCtep < cpuBuildLimit)
-                (cpuBuildc + cpuBuildCtep++)->Ce();
-            //
-            cpuCedLimit = VeeD(ctepF); // D
-            cpuCedc = (CpuCed *)new char[cpuCedLimit * sizeof(CpuCed)];
-            int64_t cpuCedCtep = 0;
-            while (cpuCedCtep < cpuCedLimit)
-                (cpuCedc + cpuCedCtep++)->Ce();
-            //
             cpuCoulLimit = VeeD(ctepF); // D
             cpuCoulc = (CpuCoul *)new char[cpuCoulLimit * sizeof(CpuCoul)];
             int64_t cpuCoulCtep = 0;
             while (cpuCoulCtep < cpuCoulLimit)
                 (cpuCoulc + cpuCoulCtep++)->Ce();
-            //
-            cpuCpacLimit = VeeD(ctepF); // D
-            cpuCpacc = (CpuCpac *)new char[cpuCpacLimit * sizeof(CpuCpac)];
-            int64_t cpuCpacCtep = 0;
-            while (cpuCpacCtep < cpuCpacLimit)
-                (cpuCpacc + cpuCpacCtep++)->Ce();
-            //
-            cpuCynLimit = VeeD(ctepF); // D
-            cpuCync = (CpuCyn *)new char[cpuCynLimit * sizeof(CpuCyn)];
-            int64_t cpuCynCtep = 0;
-            while (cpuCynCtep < cpuCynLimit)
-                (cpuCync + cpuCynCtep++)->Ce();
             //
             cpuFillLimit = VeeD(ctepF); // D
             cpuFillc = (CpuFill *)new char[cpuFillLimit * sizeof(CpuFill)];
@@ -76,23 +46,17 @@ void VBCc::Be(CpuCoul *_cpuCoul, float *&_ctepF){
             while (cpuFillCtep < cpuFillLimit)
                 (cpuFillc + cpuFillCtep++)->Ce();
             //
-            cpuKeyLimit = VeeD(ctepF); // D
-            cpuKeyc = (CpuKey *)new char[cpuKeyLimit * sizeof(CpuKey)];
-            int64_t cpuKeyCtep = 0;
-            while (cpuKeyCtep < cpuKeyLimit)
-                (cpuKeyc + cpuKeyCtep++)->Ce();
-            //
             cpuKlokLimit = VeeD(ctepF); // D
             cpuKlokc = (CpuKlok *)new char[cpuKlokLimit * sizeof(CpuKlok)];
             int64_t cpuKlokCtep = 0;
             while (cpuKlokCtep < cpuKlokLimit)
                 (cpuKlokc + cpuKlokCtep++)->Ce();
             //
-            cpuPopLimit = VeeD(ctepF); // D
-            cpuPopc = (CpuPop *)new char[cpuPopLimit * sizeof(CpuPop)];
-            int64_t cpuPopCtep = 0;
-            while (cpuPopCtep < cpuPopLimit)
-                (cpuPopc + cpuPopCtep++)->Ce();
+            cpuLinkLimit = VeeD(ctepF); // D
+            cpuLinkc = (CpuLink *)new char[cpuLinkLimit * sizeof(CpuLink)];
+            int64_t cpuLinkCtep = 0;
+            while (cpuLinkCtep < cpuLinkLimit)
+                (cpuLinkc + cpuLinkCtep++)->Ce();
             //endregion
             //region Gpu
             gpuLimit = VeeD(ctepF); // D
@@ -119,23 +83,11 @@ void VBCc::Be(CpuCoul *_cpuCoul, float *&_ctepF){
             while (gpuBarGramBeGramCtep < gpuBarGramBeGramLimit)
                 (gpuBarGramBeGramc + gpuBarGramBeGramCtep++)->Ce();
             //
-            gpuCedLimit = VeeD(ctepF); // D
-            gpuCedc = (GpuCed *)new char[gpuCedLimit * sizeof(GpuCed)];
-            int64_t gpuCedCtep = 0;
-            while (gpuCedCtep < gpuCedLimit)
-                (gpuCedc + gpuCedCtep++)->Ce();
-            //
             gpuCpuKomaBagLimit = VeeD(ctepF); // D
             gpuCpuKomaBagc = (GpuCpuKomaBag *)new char[gpuCpuKomaBagLimit * sizeof(GpuCpuKomaBag)];
             int64_t gpuCpuKomaBagCtep = 0;
             while (gpuCpuKomaBagCtep < gpuCpuKomaBagLimit)
                 (gpuCpuKomaBagc + gpuCpuKomaBagCtep++)->Ce();
-            //
-            gpuCynLimit = VeeD(ctepF); // D
-            gpuCync = (GpuCyn *)new char[gpuCynLimit * sizeof(GpuCyn)];
-            int64_t gpuCynCtep = 0;
-            while (gpuCynCtep < gpuCynLimit)
-                (gpuCync + gpuCynCtep++)->Ce();
             //
             gpuGnBagLimit = VeeD(ctepF); // D
             gpuGnBagc = (GpuGnBag *)new char[gpuGnBagLimit * sizeof(GpuGnBag)];
@@ -386,156 +338,6 @@ void VBCc::Vee(CpuCoul *_cpuCoul, float *&_ctepF){
                     }
                     //endregion
                 }
-                else if (viB == CpuViBBrain){
-                    //region CpuBrain
-                    float viB0Limit = VeeF(ctepF); // F
-                    float viB0Ctep = 0;
-                    while (viB0Ctep < viB0Limit){
-                        float viB0 = VeeF(ctepF); // F
-                        if (viB0 == ViBVee){
-                            //region Vee
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > cpuBrainLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[CpuBrain:Vee Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                cpuBrainc[pointCtep++].Vee(_cpuCoul, ctepF);
-                            //endregion
-                        }
-                        else if (viB0 == ViBBe){
-                            //region Be
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > cpuBrainLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[CpuBrain:Be Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                cpuBrainc[pointCtep++].Be(_cpuCoul, ctepF);
-                            //endregion
-                        }
-                        else if (viB0 == ViBCe){
-                            //region Ce
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > cpuBrainLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[CpuBrain:Ce Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                cpuBrainc[pointCtep++].Ce();
-                            //endregion
-                        }
-                        else if (viB0 == ViBPec){
-                            //region Pec
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > cpuBrainLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[CpuBrain:Pec Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                cpuBrainc[pointCtep++].Pec();
-                            //endregion
-                        }
-                        ++viB0Ctep;
-                    }
-                    //endregion
-                }
-                else if (viB == CpuViBBuild){
-                    //region CpuBuild
-                    float viB0Limit = VeeF(ctepF); // F
-                    float viB0Ctep = 0;
-                    while (viB0Ctep < viB0Limit){
-                        float viB0 = VeeF(ctepF); // F
-                        if (viB0 == ViBVee){
-                            //region Vee
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > cpuBuildLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[CpuBuild:Vee Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                cpuBuildc[pointCtep++].Vee(_cpuCoul, ctepF);
-                            //endregion
-                        }
-                        else if (viB0 == ViBBe){
-                            //region Be
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > cpuBuildLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[CpuBuild:Be Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                cpuBuildc[pointCtep++].Be(_cpuCoul, ctepF);
-                            //endregion
-                        }
-                        else if (viB0 == ViBCe){
-                            //region Ce
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > cpuBuildLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[CpuBuild:Ce Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                cpuBuildc[pointCtep++].Ce();
-                            //endregion
-                        }
-                        else if (viB0 == ViBPec){
-                            //region Pec
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > cpuBuildLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[CpuBuild:Pec Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                cpuBuildc[pointCtep++].Pec();
-                            //endregion
-                        }
-                        ++viB0Ctep;
-                    }
-                    //endregion
-                }
-                else if (viB == CpuViBCed){
-                    //region CpuCed
-                    float viB0Limit = VeeF(ctepF); // F
-                    float viB0Ctep = 0;
-                    while (viB0Ctep < viB0Limit){
-                        float viB0 = VeeF(ctepF); // F
-                        if (viB0 == ViBVee){
-                            //region Vee
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > cpuCedLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[CpuCed:Vee Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                cpuCedc[pointCtep++].Vee(_cpuCoul, ctepF);
-                            //endregion
-                        }
-                        else if (viB0 == ViBBe){
-                            //region Be
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > cpuCedLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[CpuCed:Be Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                cpuCedc[pointCtep++].Be(_cpuCoul, ctepF);
-                            //endregion
-                        }
-                        else if (viB0 == ViBCe){
-                            //region Ce
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > cpuCedLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[CpuCed:Ce Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                cpuCedc[pointCtep++].Ce();
-                            //endregion
-                        }
-                        else if (viB0 == ViBPec){
-                            //region Pec
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > cpuCedLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[CpuCed:Pec Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                cpuCedc[pointCtep++].Pec();
-                            //endregion
-                        }
-                        ++viB0Ctep;
-                    }
-                    //endregion
-                }
                 else if (viB == CpuViBCoul){
                     //region CpuCoul
                     float viB0Limit = VeeF(ctepF); // F
@@ -580,106 +382,6 @@ void VBCc::Vee(CpuCoul *_cpuCoul, float *&_ctepF){
                                 throw ExtraSauce("Error :: VBCc:Vee[CpuCoul:Pec Limit Exceeded]");
                             while (pointCtep < pointLimit)
                                 cpuCoulc[pointCtep++].Pec();
-                            //endregion
-                        }
-                        ++viB0Ctep;
-                    }
-                    //endregion
-                }
-                else if (viB == CpuViBCpac){
-                    //region CpuCpac
-                    float viB0Limit = VeeF(ctepF); // F
-                    float viB0Ctep = 0;
-                    while (viB0Ctep < viB0Limit){
-                        float viB0 = VeeF(ctepF); // F
-                        if (viB0 == ViBVee){
-                            //region Vee
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > cpuCpacLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[CpuCpac:Vee Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                cpuCpacc[pointCtep++].Vee(_cpuCoul, ctepF);
-                            //endregion
-                        }
-                        else if (viB0 == ViBBe){
-                            //region Be
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > cpuCpacLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[CpuCpac:Be Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                cpuCpacc[pointCtep++].Be(_cpuCoul, ctepF);
-                            //endregion
-                        }
-                        else if (viB0 == ViBCe){
-                            //region Ce
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > cpuCpacLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[CpuCpac:Ce Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                cpuCpacc[pointCtep++].Ce();
-                            //endregion
-                        }
-                        else if (viB0 == ViBPec){
-                            //region Pec
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > cpuCpacLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[CpuCpac:Pec Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                cpuCpacc[pointCtep++].Pec();
-                            //endregion
-                        }
-                        ++viB0Ctep;
-                    }
-                    //endregion
-                }
-                else if (viB == CpuViBCyn){
-                    //region CpuCyn
-                    float viB0Limit = VeeF(ctepF); // F
-                    float viB0Ctep = 0;
-                    while (viB0Ctep < viB0Limit){
-                        float viB0 = VeeF(ctepF); // F
-                        if (viB0 == ViBVee){
-                            //region Vee
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > cpuCynLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[CpuCyn:Vee Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                cpuCync[pointCtep++].Vee(_cpuCoul, ctepF);
-                            //endregion
-                        }
-                        else if (viB0 == ViBBe){
-                            //region Be
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > cpuCynLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[CpuCyn:Be Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                cpuCync[pointCtep++].Be(_cpuCoul, ctepF);
-                            //endregion
-                        }
-                        else if (viB0 == ViBCe){
-                            //region Ce
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > cpuCynLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[CpuCyn:Ce Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                cpuCync[pointCtep++].Ce();
-                            //endregion
-                        }
-                        else if (viB0 == ViBPec){
-                            //region Pec
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > cpuCynLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[CpuCyn:Pec Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                cpuCync[pointCtep++].Pec();
                             //endregion
                         }
                         ++viB0Ctep;
@@ -736,56 +438,6 @@ void VBCc::Vee(CpuCoul *_cpuCoul, float *&_ctepF){
                     }
                     //endregion
                 }
-                else if (viB == CpuViBKey){
-                    //region CpuKey
-                    float viB0Limit = VeeF(ctepF); // F
-                    float viB0Ctep = 0;
-                    while (viB0Ctep < viB0Limit){
-                        float viB0 = VeeF(ctepF); // F
-                        if (viB0 == ViBVee){
-                            //region Vee
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > cpuKeyLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[CpuKey:Vee Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                cpuKeyc[pointCtep++].Vee(_cpuCoul, ctepF);
-                            //endregion
-                        }
-                        else if (viB0 == ViBBe){
-                            //region Be
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > cpuKeyLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[CpuKey:Be Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                cpuKeyc[pointCtep++].Be(_cpuCoul, ctepF);
-                            //endregion
-                        }
-                        else if (viB0 == ViBCe){
-                            //region Ce
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > cpuKeyLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[CpuKey:Ce Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                cpuKeyc[pointCtep++].Ce();
-                            //endregion
-                        }
-                        else if (viB0 == ViBPec){
-                            //region Pec
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > cpuKeyLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[CpuKey:Pec Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                cpuKeyc[pointCtep++].Pec();
-                            //endregion
-                        }
-                        ++viB0Ctep;
-                    }
-                    //endregion
-                }
                 else if (viB == CpuViBKlok){
                     //region CpuKlok
                     float viB0Limit = VeeF(ctepF); // F
@@ -836,8 +488,8 @@ void VBCc::Vee(CpuCoul *_cpuCoul, float *&_ctepF){
                     }
                     //endregion
                 }
-                else if (viB == CpuViBPop){
-                    //region CpuPop
+                else if (viB == CpuViBLink){
+                    //region CpuLink
                     float viB0Limit = VeeF(ctepF); // F
                     float viB0Ctep = 0;
                     while (viB0Ctep < viB0Limit) {
@@ -846,40 +498,40 @@ void VBCc::Vee(CpuCoul *_cpuCoul, float *&_ctepF){
                             //region Vee
                             uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
                             uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > cpuPopLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[CpuPop:Vee Limit Exceeded]");
+                            if (pointLimit > cpuLinkLimit)
+                                throw ExtraSauce("Error :: VBCc:Vee[CpuLink:Vee Limit Exceeded]");
                             while (pointCtep < pointLimit)
-                                cpuPopc[pointCtep++].Vee(_cpuCoul, ctepF);
+                                cpuLinkc[pointCtep++].Vee(_cpuCoul, ctepF);
                             //endregion
                         }
                         else if (viB0 == ViBBe) {
                             //region Be
                             uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
                             uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > cpuPopLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[CpuPop:Be Limit Exceeded]");
+                            if (pointLimit > cpuLinkLimit)
+                                throw ExtraSauce("Error :: VBCc:Vee[CpuLink:Be Limit Exceeded]");
                             while (pointCtep < pointLimit)
-                                cpuPopc[pointCtep++].Be(_cpuCoul, ctepF);
+                                cpuLinkc[pointCtep++].Be(_cpuCoul, ctepF);
                             //endregion
                         }
                         else if (viB0 == ViBCe) {
                             //region Ce
                             uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
                             uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > cpuPopLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[CpuPop:Ce Limit Exceeded]");
+                            if (pointLimit > cpuLinkLimit)
+                                throw ExtraSauce("Error :: VBCc:Vee[CpuLink:Ce Limit Exceeded]");
                             while (pointCtep < pointLimit)
-                                cpuPopc[pointCtep++].Ce();
+                                cpuLinkc[pointCtep++].Ce();
                             //endregion
                         }
                         else if (viB0 == ViBPec) {
                             //region Pec
                             uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
                             uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > cpuPopLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[CpuPop:Pec Limit Exceeded]");
+                            if (pointLimit > cpuLinkLimit)
+                                throw ExtraSauce("Error :: VBCc:Vee[CpuLink:Pec Limit Exceeded]");
                             while (pointCtep < pointLimit)
-                                cpuPopc[pointCtep++].Pec();
+                                cpuLinkc[pointCtep++].Pec();
                             //endregion
                         }
                         ++viB0Ctep;
@@ -1090,56 +742,6 @@ void VBCc::Vee(CpuCoul *_cpuCoul, float *&_ctepF){
                     }
                     //endregion
                 }
-                else if (viB == GpuViBCed){
-                    //region GpuCed
-                    float viB0Limit = VeeF(ctepF); // F
-                    float viB0Ctep = 0;
-                    while (viB0Ctep < viB0Limit){
-                        float viB0 = VeeF(ctepF); // F
-                        if (viB0 == ViBVee){
-                            //region Vee
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > gpuCedLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[GpuCed:Vee Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                gpuCedc[pointCtep++].Vee(_cpuCoul, ctepF);
-                            //endregion
-                        }
-                        else if (viB0 == ViBBe){
-                            //region Be
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > gpuCedLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[GpuCed:Be Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                gpuCedc[pointCtep++].Be(_cpuCoul, ctepF);
-                            //endregion
-                        }
-                        else if (viB0 == ViBCe){
-                            //region Ce
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > gpuCedLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[GpuCed:Ce Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                gpuCedc[pointCtep++].Ce();
-                            //endregion
-                        }
-                        else if (viB0 == ViBPec){
-                            //region Pec
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > gpuCedLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[GpuCed:Pec Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                gpuCedc[pointCtep++].Pec();
-                            //endregion
-                        }
-                        ++viB0Ctep;
-                    }
-                    //endregion
-                }
                 else if (viB == GpuViBCpuKomaBag){
                     //region GpuCpuKomaBag
                     float viB0Limit = VeeF(ctepF); // F
@@ -1184,56 +786,6 @@ void VBCc::Vee(CpuCoul *_cpuCoul, float *&_ctepF){
                                 throw ExtraSauce("Error :: VBCc:Vee[GpuCpuKomaBag:Pec Limit Exceeded]");
                             while (pointCtep < pointLimit)
                                 gpuCpuKomaBagc[pointCtep++].Pec();
-                            //endregion
-                        }
-                        ++viB0Ctep;
-                    }
-                    //endregion
-                }
-                else if (viB == GpuViBCyn){
-                    //region GpuCyn
-                    float viB0Limit = VeeF(ctepF); // F
-                    float viB0Ctep = 0;
-                    while (viB0Ctep < viB0Limit){
-                        float viB0 = VeeF(ctepF); // F
-                        if (viB0 == ViBVee){
-                            //region Vee
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > gpuCynLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[GpuCyn:Vee Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                gpuCync[pointCtep++].Vee(_cpuCoul, ctepF);
-                            //endregion
-                        }
-                        else if (viB0 == ViBBe){
-                            //region Be
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > gpuCynLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[GpuCyn:Be Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                gpuCync[pointCtep++].Be(_cpuCoul, ctepF);
-                            //endregion
-                        }
-                        else if (viB0 == ViBCe){
-                            //region Ce
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > gpuCynLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[GpuCyn:Ce Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                gpuCync[pointCtep++].Ce();
-                            //endregion
-                        }
-                        else if (viB0 == ViBPec){
-                            //region Pec
-                            uint64_t pointCtep = (uint64_t)VeeD(ctepF); // D
-                            uint64_t pointLimit = pointCtep + (uint64_t)VeeD(ctepF); // D
-                            if (pointLimit > gpuCynLimit)
-                                throw ExtraSauce("Error :: VBCc:Vee[GpuCyn:Pec Limit Exceeded]");
-                            while (pointCtep < pointLimit)
-                                gpuCync[pointCtep++].Pec();
                             //endregion
                         }
                         ++viB0Ctep;
@@ -1959,51 +1511,6 @@ void VBCc::Pec(){
         }
         delete[] cpuBarc;
         //endregion
-        //region CpuBrain
-        pointCtep = 0;
-        while (pointCtep < cpuBrainLimit){
-            CpuBrain *cpuBrain = &(cpuBrainc[pointCtep]);
-            cpuBrain->Pec();
-            ++pointCtep;
-        }
-        delete[] cpuBrainc;
-        //endregion
-        //region CpuBuild
-        pointCtep = 0;
-        while (pointCtep < cpuBuildLimit){
-            CpuBuild *cpuBuild = &(cpuBuildc[pointCtep]);
-            cpuBuild->Pec();
-            ++pointCtep;
-        }
-        delete[] cpuBuildc;
-        //endregion
-        //region CpuCed
-        pointCtep = 0;
-        while (pointCtep < cpuCedLimit){
-            class CpuCed *cpuCed = &(cpuCedc[pointCtep]);
-            cpuCed->Pec();
-            ++pointCtep;
-        }
-        delete[] cpuCedc;
-        //endregion
-        //region CpuCpac
-        pointCtep = 0;
-        while (pointCtep < cpuCpacLimit){
-            CpuCpac *cpuCpac = &(cpuCpacc[pointCtep]);
-            cpuCpac->Pec();
-            ++pointCtep;
-        }
-        delete[] cpuCpacc;
-        //endregion
-        //region CpuCyn
-        pointCtep = 0;
-        while (pointCtep < cpuCynLimit){
-            CpuCyn *cpuCyn = &(cpuCync[pointCtep]);
-            cpuCyn->Pec();
-            ++pointCtep;
-        }
-        delete[] cpuCync;
-        //endregion
         //region CpuFill
         pointCtep = 0;
         while (pointCtep < cpuFillLimit){
@@ -2013,14 +1520,14 @@ void VBCc::Pec(){
         }
         delete[] cpuFillc;
         //endregion
-        //region CpuKey
+        //region CpuBite
         pointCtep = 0;
-        while (pointCtep < cpuKeyLimit){
-            CpuKey *cpuKey = &(cpuKeyc[pointCtep]);
-            cpuKey->Pec();
+        while (pointCtep < cpuBiteLimit){
+            CpuBite *cpuBite = &(cpuBitec[pointCtep]);
+            cpuBite->Pec();
             ++pointCtep;
         }
-        delete[] cpuKeyc;
+        delete[] cpuBitec;
         //endregion
         //region CpuKlok
         pointCtep = 0;
@@ -2031,14 +1538,14 @@ void VBCc::Pec(){
         }
         delete[] cpuKlokc;
         //endregion
-        //region CpuPop
+        //region CpuLink
         pointCtep = 0;
-        while (pointCtep < cpuPopLimit){
-            CpuPop *cpuPop = &(cpuPopc[pointCtep]);
-            cpuPop->Pec();
+        while (pointCtep < cpuLinkLimit){
+            CpuLink *cpuLink = &(cpuLinkc[pointCtep]);
+            cpuLink->Pec();
             ++pointCtep;
         }
-        delete[] cpuPopc;
+        delete[] cpuLinkc;
         //endregion
         //region GpuCpuKomaBag
         pointCtep = 0;
@@ -2102,15 +1609,6 @@ void VBCc::Pec(){
             ++pointCtep;
         }
         delete[] gpuBarGramBeGramc;
-        //endregion
-        //region GpuCyn
-        pointCtep = 0;
-        while (pointCtep < gpuCynLimit){
-            GpuCyn *gpuCyn = &(gpuCync[pointCtep]);
-            gpuCyn->Pec();
-            ++pointCtep;
-        }
-        delete[] gpuCync;
         //endregion
         //region GpuLink
         pointCtep = 0;
@@ -2201,15 +1699,6 @@ void VBCc::Pec(){
             ++pointCtep;
         }
         delete[] gpuVuc;
-        //endregion
-        //region GpuCed
-        pointCtep = 0;
-        while (pointCtep < gpuCedLimit){
-            GpuCed *gpuCed = &(gpuCedc[pointCtep]);
-            gpuCed->Pec();
-            ++pointCtep;
-        }
-        delete[] gpuCedc;
         //endregion
     }
 }
