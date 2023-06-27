@@ -20,12 +20,11 @@ Pec : to destroy it.
 
 # Look Around
 
-Start by exploring the header files of each ViB. (VBC'c is the most complicated because it ties everything together. Try starting with a ViB in the Cpu directory?)
+Start by exploring the header files of each ViB.
+(VBC'c is the most complicated because it ties everything together. Try starting with a ViB in the Cpu directory?)
 
 (Excluding Vulkan_Wrapper and Jeneral files; which are extra sauce) If you explore the header files you will see a class (which is the ViB)
 and each class declares the 4 functions. Member variables in the class are assigned via these functions.
-
-Very Simple. The same 4 Functions in every class!
                 
 The Source files simply define these 4 functions for the class. After looking at a couple, you will see a pattern that will help you learn the rest.
         
