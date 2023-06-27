@@ -6,7 +6,7 @@ Or make it into an OS itself?
 
 # It is very simple.
 
-VBC'c has all the cpu and gpu ViB'c you need to program.
+VBC'c has all the cpu and gpu ViB'c you need to get things done.
 
 All the ViB'c are defined via 4 functions:
 
