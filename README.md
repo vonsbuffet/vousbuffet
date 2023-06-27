@@ -19,8 +19,8 @@ Ce - create it.
 
 Start by exploring ViB header files; member variables explain what they do.
 
-Header files define a class (the "ViB") that declares the 4 functions.
-</br>The Source files define the 4 functions for the class; where member variables are assigned.
+Header files define a class (the "ViB") that declares 4 functions.
+</br>The Source files define 4 functions for the class; where member variables are assigned.
 
 After a couple ViB, you will see a pattern that will help you learn the rest.
 
@@ -40,7 +40,7 @@ Look through the VBCc->Be branches to decide on what floats you need to make it 
 
 You can also run orders during runtime in the same way. Search through CpuCoul->Vee and find the "vbcc.Vee" call in the VB region.
 </br>The CpuCoul may seem a bit complicated,
-</br>but it's really a simple virtual machine that runs virtual machine code optimized for AI.
+</br>but it's really simple virtual machine that runs virtual machine code optimized for AI.
 
 You can change the CpuCoul to be the virtual machine of your choice, and program it?
 </br>You can add a compiler ViB to compute real machine code for max performance, and jump to the raw instructions with the CpuCoul?
@@ -48,11 +48,11 @@ You can change the CpuCoul to be the virtual machine of your choice, and program
 
 Very Fun!
 
-# Explore these 4 functions carefully.
+# Explore 4 functions carefully.
 
-They do more than simplify the Vulkan API.
+They do more than add order to the Vulkan API.
 
-These 4 functions emerged from Von's Buffet's special equation.
+4 functions emerged from Von's Buffet's special equation.
 
 The equation helped us do more than create this.
 
@@ -68,7 +68,7 @@ You still use primitive technology? kk, our contact can use email: TheVoniestMic
 
 For best experience, use Android Studio, or any editor that supports code folding via: '//region' syntax.
 
-If you want us to add more ViB, eg. for traditional graphics programming, tools and tricks, etc. Contact us through your spirits.
+If you want us to add more ViB, eg. for traditional graphics programming, tools, tricks, etc. Contact us through your spirits.
 
 VonsBuffet.ca
 </br>"You are the key."
