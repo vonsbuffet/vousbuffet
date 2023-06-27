@@ -53,7 +53,7 @@ If you need help unlocking it, please contact us through your spirits.
 
 :)
 
-You still use primitive technology don't you? kk, our face of contact sometimes uses email: TheVoniestMichael@VonsBuffet.ca
+You still use primitive technology don't you? kk, our contact may use email: TheVoniestMichael@VonsBuffet.ca
 
 # Extra Sauce
 
