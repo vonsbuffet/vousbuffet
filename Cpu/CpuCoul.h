@@ -3,19 +3,7 @@
 
 #include "VBCc.h"
 
-struct EoBarCpuCoul{
-    float *pointCe;
-    int32_t limitCe;
-    int32_t *pointBe;
-    int32_t limitBe;
-    int32_t *pointVee;
-    int32_t limitVee;
-};
-
 void *CpuCoulUne(void * _cpuCoul);
-extern int64_t coulKomaVB;
-void CoulKomaCe(CpuCoul *_cpuCoul, EoBarCpuCoul *_eoBar);
-void CoulKomaPec(CpuCoul *_cpuCoul, EoBarCpuCoul *_eoBar);
 
 class CpuCoul {
 public:
@@ -29,8 +17,7 @@ public:
     int64_t VB;
     int64_t ViB;
     int64_t veeVB, komaVB;
-    int32_t *vPxVeePointI;
-    EoBarCpuCoul eoBar;
+    int32_t *veePointI;
     int64_t RE;
     float *bePointF;
     pthread_t pthread;
