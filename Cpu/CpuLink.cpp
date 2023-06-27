@@ -1,45 +1,9 @@
-//
-// Link your plug. Lets get it...
-//
-
-#include <linux/in6.h>
 #include "CpuLink.h"
 
-// Extra Sauce
-CpuLink::CpuLink() {
-    Ce();
-}
-CpuLink::~CpuLink() {
-    Pec();
-}
-// Enough Sauce!
-
-void CpuLink::Pec(){
-    if (VB >= 16){
-        VB -= 16;
-
-        if (VB >= 32){
-            VB -= 32;
-
-            int64_t tcpSocketCtep = 0;
-            while (tcpSocketCtep < tcpSocketLimit){
-                if (tcpSocketc[tcpSocketCtep] != -1)
-                    close(tcpSocketc[tcpSocketCtep]);
-                ++tcpSocketCtep;
-            }
-        }
-        delete[] tcpSocketc;
-    }
-    if (VB > 0){
-        VB = 0;
-
-        close(socketI);
-    }
-}
 void CpuLink::Ce(){
     VB = 0;
 }
-void CpuLink::Be(VBCc *_viBer, CpuCoul *_cpuCoul, float *&_ctepF) {
+void CpuLink::Be(CpuCoul *_cpuCoul, float *&_ctepF) {
     float *ctepF = _ctepF;
     try{
         float VB0 = VeeF(ctepF); // F
@@ -58,13 +22,13 @@ void CpuLink::Be(VBCc *_viBer, CpuCoul *_cpuCoul, float *&_ctepF) {
             if (blockViB == 0){
                 socketI = socket(AF_INET6, SOCK_DGRAM, 0);
                 if (socketI == -1){
-                    _viBer->RE = errno;
+                    _cpuCoul->RE = errno;
                     throw -1;
                 }
             } else if (blockViB == 1){
                 socketI = socket(AF_INET6, SOCK_DGRAM | SOCK_NONBLOCK, 0);
                 if (socketI == -1){
-                    _viBer->RE = errno;
+                    _cpuCoul->RE = errno;
                     throw -1;
                 }
             }
@@ -80,13 +44,13 @@ void CpuLink::Be(VBCc *_viBer, CpuCoul *_cpuCoul, float *&_ctepF) {
             if (blockViB == 0){
                 socketI = socket(AF_INET, SOCK_DGRAM, 0);
                 if (socketI == -1){
-                    _viBer->RE = errno;
+                    _cpuCoul->RE = errno;
                     throw -1;
                 }
             } else if (blockViB == 1){
                 socketI = socket(AF_INET, SOCK_DGRAM | SOCK_NONBLOCK, 0);
                 if (socketI == -1){
-                    _viBer->RE = errno;
+                    _cpuCoul->RE = errno;
                     throw -1;
                 }
             }
@@ -102,13 +66,13 @@ void CpuLink::Be(VBCc *_viBer, CpuCoul *_cpuCoul, float *&_ctepF) {
             if (blockViB == 0){
                 socketI = socket(AF_INET6, SOCK_STREAM, 0);
                 if (socketI == -1){
-                    _viBer->RE = errno;
+                    _cpuCoul->RE = errno;
                     throw -1;
                 }
             } else if (blockViB == 1){
                 socketI = socket(AF_INET6, SOCK_STREAM | SOCK_NONBLOCK, 0);
                 if (socketI == -1){
-                    _viBer->RE = errno;
+                    _cpuCoul->RE = errno;
                     throw -1;
                 }
             }
@@ -124,13 +88,13 @@ void CpuLink::Be(VBCc *_viBer, CpuCoul *_cpuCoul, float *&_ctepF) {
             if (blockViB == 0){
                 socketI = socket(AF_INET, SOCK_STREAM, 0);
                 if (socketI == -1){
-                    _viBer->RE = errno;
+                    _cpuCoul->RE = errno;
                     throw -1;
                 }
             } else if (blockViB == 1){
                 socketI = socket(AF_INET, SOCK_STREAM | SOCK_NONBLOCK, 0);
                 if (socketI == -1){
-                    _viBer->RE = errno;
+                    _cpuCoul->RE = errno;
                     throw -1;
                 }
             }
@@ -146,7 +110,7 @@ void CpuLink::Be(VBCc *_viBer, CpuCoul *_cpuCoul, float *&_ctepF) {
             addr6.sin6_port = htons(VeeFU(ctepF)); // F
             int32_t RE = bind(socketI, (struct sockaddr *)&addr6, sizeof(addr6));
             if (RE == -1){
-                _viBer->RE = errno;
+                _cpuCoul->RE = errno;
                 throw -1;
             }
             //endregion
@@ -160,7 +124,7 @@ void CpuLink::Be(VBCc *_viBer, CpuCoul *_cpuCoul, float *&_ctepF) {
             addr4.sin_port = htons(VeeFU(ctepF)); // F
             int32_t RE = bind(socketI, (struct sockaddr *)&addr4, sizeof(addr4));
             if (RE == -1){
-                _viBer->RE = errno;
+                _cpuCoul->RE = errno;
                 throw -1;
             }
             //endregion
@@ -252,7 +216,7 @@ void CpuLink::Be(VBCc *_viBer, CpuCoul *_cpuCoul, float *&_ctepF) {
         throw -1;
     }
 }
-void CpuLink::Vee(VBCc *_viBer, CpuCoul *_cpuCoul, float *&_ctepF) {
+void CpuLink::Vee(CpuCoul *_cpuCoul, float *&_ctepF) {
     float *ctepF = _ctepF;
     try{
         float viBLimit = VeeF(ctepF); // F
@@ -264,8 +228,8 @@ void CpuLink::Vee(VBCc *_viBer, CpuCoul *_cpuCoul, float *&_ctepF) {
                 //region Vee
                 if (VB == 1){
                     //region UDP | IPv6
-                    float *ipPointF = (float *)VeeP(ctepF, _viBer); // P (ipPointC)
-                    float *pakPointF = (float *)VeeP(ctepF, _viBer); // P (pakPointC)
+                    float *ipPointF = (float *)VeeP(ctepF); // P (ipPointC)
+                    float *pakPointF = (float *)VeeP(ctepF); // P (pakPointC)
 
                     float *ipCtepF = ipPointF + 1;
                     addr6.sin6_family = (sa_family_t)VeeFU(ipCtepF);
@@ -291,14 +255,14 @@ void CpuLink::Vee(VBCc *_viBer, CpuCoul *_cpuCoul, float *&_ctepF) {
                     int64_t pakLimitC = VeeD(pakCtepF);
                     pakLimitC = sendto(socketI, (void *)pakCtepF, (size_t)pakLimitC, 0, (struct sockaddr *)&addr6, sizeof(addr6));
                     if (pakLimitC < 0){
-                        _viBer->RE = errno;
+                        _cpuCoul->RE = errno;
                         throw -1;
                     }
                     //endregion
                 } else if (VB == 2){
                     //region UDP | IPv4
-                    float *ipPointF = (float *)VeeP(ctepF, _viBer); // P (ipPointC)
-                    float *pakPointF = (float *)VeeP(ctepF, _viBer); // P (pakPointC)
+                    float *ipPointF = (float *)VeeP(ctepF); // P (ipPointC)
+                    float *pakPointF = (float *)VeeP(ctepF); // P (pakPointC)
 
                     uint8_t ipv4[4];
                     float *ipCtepF = ipPointF + 1;
@@ -314,33 +278,33 @@ void CpuLink::Vee(VBCc *_viBer, CpuCoul *_cpuCoul, float *&_ctepF) {
                     int64_t pakLimitC = VeeD(pakCtepF);
                     pakLimitC = sendto(socketI, (void *)pakCtepF, (size_t)pakLimitC, 0, (struct sockaddr *)&addr4, sizeof(addr4));
                     if (pakLimitC < 0){
-                        _viBer->RE = errno;
+                        _cpuCoul->RE = errno;
                         throw -1;
                     }
                     //endregion
                 } else if (VB <= 8){
                     //region TCP | Client | IPv6 or IPv4
-                    char *streamPointC = VeeP(ctepF, _viBer); // P
+                    char *streamPointC = VeeP(ctepF); // P
                     int64_t streamLimitC = VeeD(ctepF); // D
-                    float *truLimitCPointF = (float *)VeeP(ctepF, _viBer); // P
+                    float *truLimitCPointF = (float *)VeeP(ctepF); // P
 
                     streamLimitC = write(socketI, (void *)streamPointC, (size_t)streamLimitC);
                     if (streamLimitC < 0){
-                        _viBer->RE = errno;
+                        _cpuCoul->RE = errno;
                         throw -1;
                     }
                     BeD(truLimitCPointF, streamLimitC); // *D
                     //endregion
                 } else if (VB <= 56){
                     //region TCP | Server | IPv6 or IPv4
-                    char *streamPointC = VeeP(ctepF, _viBer); // P
+                    char *streamPointC = VeeP(ctepF); // P
                     int64_t streamLimitC = VeeD(ctepF); // D
-                    float *truLimitCPointF = (float *)VeeP(ctepF, _viBer); // P
+                    float *truLimitCPointF = (float *)VeeP(ctepF); // P
                     int64_t tcpSocketPoint = VeeD(ctepF); // D
 
                     streamLimitC = write(tcpSocketc[tcpSocketPoint], (void *)streamPointC, (size_t)streamLimitC);
                     if (streamLimitC < 0){
-                        _viBer->RE = errno;
+                        _cpuCoul->RE = errno;
                         throw -1;
                     }
                     BeD(truLimitCPointF, streamLimitC); // *D
@@ -351,15 +315,15 @@ void CpuLink::Vee(VBCc *_viBer, CpuCoul *_cpuCoul, float *&_ctepF) {
                 //region Be
                 if (VB == 1){
                     //region UDP | IPv6
-                    float *ipPointF = (float *)VeeP(ctepF, _viBer); // P (ipPointC)
-                    float *pakPointF = (float *)VeeP(ctepF, _viBer); // P (pakPointC)
+                    float *ipPointF = (float *)VeeP(ctepF); // P (ipPointC)
+                    float *pakPointF = (float *)VeeP(ctepF); // P (pakPointC)
                     int64_t pakLimitC = VeeD(ctepF); // D
 
                     socklen_t addr6LimitC;
                     float *pakCtepF = pakPointF + 2;
                     pakLimitC = recvfrom(socketI, (void *)pakCtepF, (size_t)pakLimitC, 0, (struct sockaddr *)&addr6, &addr6LimitC);
                     if (pakLimitC < 0){
-                        _viBer->RE = errno;
+                        _cpuCoul->RE = errno;
                         throw -1;
                     }
 
@@ -389,15 +353,15 @@ void CpuLink::Vee(VBCc *_viBer, CpuCoul *_cpuCoul, float *&_ctepF) {
                     //endregion
                 } else if (VB == 2){
                     //region UDP | IPv4
-                    float *ipPointF = (float *)VeeP(ctepF, _viBer); // P (ipPointC)
-                    float *pakPointF = (float *)VeeP(ctepF, _viBer); // P (pakPointC)
+                    float *ipPointF = (float *)VeeP(ctepF); // P (ipPointC)
+                    float *pakPointF = (float *)VeeP(ctepF); // P (pakPointC)
                     int64_t pakLimitC = VeeD(ctepF); // D
 
                     socklen_t addr4LimitC;
                     float *pakCtepF = pakPointF + 2;
                     pakLimitC = recvfrom(socketI, (void *)pakCtepF, (size_t)pakLimitC, 0, (struct sockaddr *)&addr4, &addr4LimitC);
                     if (pakLimitC < 0){
-                        _viBer->RE = errno;
+                        _cpuCoul->RE = errno;
                         throw -1;
                     }
 
@@ -417,13 +381,13 @@ void CpuLink::Vee(VBCc *_viBer, CpuCoul *_cpuCoul, float *&_ctepF) {
                     //endregion
                 } else if (VB <= 8){
                     //region TCP | Client | IPv6 or IPv4
-                    char *streamPointC = VeeP(ctepF, _viBer); // P
+                    char *streamPointC = VeeP(ctepF); // P
                     int64_t streamLimitC = VeeD(ctepF); // D
-                    float *truLimitCPointF = (float *)VeeP(ctepF, _viBer); // P
+                    float *truLimitCPointF = (float *)VeeP(ctepF); // P
 
                     streamLimitC = read(socketI, (void *)streamPointC, (size_t)streamLimitC);
                     if (streamLimitC == -1){
-                        _viBer->RE = errno;
+                        _cpuCoul->RE = errno;
                         throw -1;
                     }
 
@@ -431,14 +395,14 @@ void CpuLink::Vee(VBCc *_viBer, CpuCoul *_cpuCoul, float *&_ctepF) {
                     //endregion
                 } else if (VB <= 56){
                     //region TCP | Server | IPv6 or IPv4
-                    char *streamPointC = VeeP(ctepF, _viBer); // P
+                    char *streamPointC = VeeP(ctepF); // P
                     int64_t streamLimitC = VeeD(ctepF); // D
-                    float *truLimitCPointF = (float *)VeeP(ctepF, _viBer); // P
+                    float *truLimitCPointF = (float *)VeeP(ctepF); // P
                     int64_t socketPoint = VeeD(ctepF); // D
 
                     streamLimitC = read(tcpSocketc[socketPoint], (void *)streamPointC, (size_t)streamLimitC);
                     if (streamLimitC == -1){
-                        _viBer->RE = errno;
+                        _cpuCoul->RE = errno;
                         throw -1;
                     }
 
@@ -450,7 +414,7 @@ void CpuLink::Vee(VBCc *_viBer, CpuCoul *_cpuCoul, float *&_ctepF) {
                 //region Ce
                 if (VB == 4){
                     //region TCP | Connect | IPv6
-                    float *ipPointF = (float *)VeeP(ctepF, _viBer); // P (ipPointC)
+                    float *ipPointF = (float *)VeeP(ctepF); // P (ipPointC)
 
                     float *ipCtepF = ipPointF + 1;
                     addr6.sin6_family = (sa_family_t)VeeFU(ipCtepF);
@@ -474,13 +438,13 @@ void CpuLink::Vee(VBCc *_viBer, CpuCoul *_cpuCoul, float *&_ctepF) {
 
                     int32_t RE = connect(socketI, (struct sockaddr *)&addr6, sizeof(addr6));
                     if (RE == -1){
-                        _viBer->RE = errno;
+                        _cpuCoul->RE = errno;
                         throw -1;
                     }
                     //endregion
                 } else if (VB == 8){
                     //region TCP | Connect | IPv4
-                    float *ipPointF = (float *)VeeP(ctepF, _viBer); // P (ipPointC)
+                    float *ipPointF = (float *)VeeP(ctepF); // P (ipPointC)
 
                     uint8_t ipv4[4];
                     float *ipCtepF = ipPointF + 1;
@@ -494,13 +458,13 @@ void CpuLink::Vee(VBCc *_viBer, CpuCoul *_cpuCoul, float *&_ctepF) {
 
                     int32_t RE = connect(socketI, (struct sockaddr *)&addr4, sizeof(addr4));
                     if (RE == -1){
-                        _viBer->RE = errno;
+                        _cpuCoul->RE = errno;
                         throw -1;
                     }
                     //endregion
                 } else if (VB == 52){
                     //region TCP | Accept | IPv6
-                    float *ipPointF = (float *)VeeP(ctepF, _viBer); // P
+                    float *ipPointF = (float *)VeeP(ctepF); // P
                     int64_t tcpSocketPoint = VeeD(ctepF); // D
                     float socketViB = VeeF(ctepF); // F
                     float VB1 = VeeF(ctepF); // F
@@ -515,7 +479,7 @@ void CpuLink::Vee(VBCc *_viBer, CpuCoul *_cpuCoul, float *&_ctepF) {
                         socketI0 = accept4(socketI, (struct sockaddr *)&veeAddr6, &veeAddrLimitC, SOCK_NONBLOCK);
 
                     if (socketI0 == -1){
-                        _viBer->RE = errno;
+                        _cpuCoul->RE = errno;
                         throw -1;
                     }
                     tcpSocketc[tcpSocketPoint] = socketI0;
@@ -602,7 +566,7 @@ void CpuLink::Vee(VBCc *_viBer, CpuCoul *_cpuCoul, float *&_ctepF) {
                     //endregion
                 } else if (VB == 56){
                     //region TCP | Accept | IPv4
-                    float *ipPointF = (float *)VeeP(ctepF, _viBer); // P (ipPointC)
+                    float *ipPointF = (float *)VeeP(ctepF); // P (ipPointC)
                     int64_t tcpSocketPoint = VeeD(ctepF); // D
                     float socketViB = VeeF(ctepF); // F
                     float VB1 = VeeF(ctepF); // F
@@ -617,7 +581,7 @@ void CpuLink::Vee(VBCc *_viBer, CpuCoul *_cpuCoul, float *&_ctepF) {
                         socketI0 = accept4(socketI, (struct sockaddr *)&veeAddr4, &veeAddrLimitC, SOCK_NONBLOCK);
 
                     if (socketI0 == -1){
-                        _viBer->RE = errno;
+                        _cpuCoul->RE = errno;
                         throw -1;
                     }
                     tcpSocketc[tcpSocketPoint] = socketI0;
@@ -704,13 +668,13 @@ void CpuLink::Vee(VBCc *_viBer, CpuCoul *_cpuCoul, float *&_ctepF) {
                         if (blockViB == 0){
                             socketI = socket(AF_INET6, SOCK_STREAM, 0);
                             if (socketI == -1){
-                                _viBer->RE = errno;
+                                _cpuCoul->RE = errno;
                                 throw -1;
                             }
                         } else if (blockViB == 1){
                             socketI = socket(AF_INET6, SOCK_STREAM | SOCK_NONBLOCK, 0);
                             if (socketI == -1){
-                                _viBer->RE = errno;
+                                _cpuCoul->RE = errno;
                                 throw -1;
                             }
                         }
@@ -721,13 +685,13 @@ void CpuLink::Vee(VBCc *_viBer, CpuCoul *_cpuCoul, float *&_ctepF) {
                         if (blockViB == 0){
                             socketI = socket(AF_INET, SOCK_STREAM, 0);
                             if (socketI == -1){
-                                _viBer->RE = errno;
+                                _cpuCoul->RE = errno;
                                 throw -1;
                             }
                         } else if (blockViB == 1){
                             socketI = socket(AF_INET, SOCK_STREAM | SOCK_NONBLOCK, 0);
                             if (socketI == -1){
-                                _viBer->RE = errno;
+                                _cpuCoul->RE = errno;
                                 throw -1;
                             }
                         }
@@ -794,5 +758,27 @@ void CpuLink::Vee(VBCc *_viBer, CpuCoul *_cpuCoul, float *&_ctepF) {
     } catch (...){
         _ctepF = ctepF;
         throw -1;
+    }
+}
+void CpuLink::Pec(){
+    if (VB >= 16){
+        VB -= 16;
+
+        if (VB >= 32){
+            VB -= 32;
+
+            int64_t tcpSocketCtep = 0;
+            while (tcpSocketCtep < tcpSocketLimit){
+                if (tcpSocketc[tcpSocketCtep] != -1)
+                    close(tcpSocketc[tcpSocketCtep]);
+                ++tcpSocketCtep;
+            }
+        }
+        delete[] tcpSocketc;
+    }
+    if (VB > 0){
+        VB = 0;
+
+        close(socketI);
     }
 }
