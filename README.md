@@ -17,8 +17,8 @@ Ce - create it.
 
 # Look Around
 
-Start by exploring the header files of each ViB, class member variables tell what they do.
-(VBCc is most rich, to tie everything together. Try a ViB in the Cpu directory?)
+Start by exploring the header files of each ViB, class member variables explain what they do.
+</br>(VBCc is rich to tie everything together. Try a ViB in the Cpu directory?)
 
 (Excluding Vulkan_Wrapper and Jeneral files; which are extra sauce)
 </br>Header files define a class (the "ViB") that declares the 4 functions, where member variables are assigned.
@@ -39,7 +39,9 @@ Look through the VBCc->Be branches to decide on what floats you need to make it 
 </br>(const array, read from file, etc.).
 </br>You will see a // F or // D or // P next to relevant points where you can order from.
 
-You can also run your VBC'c orders during runtime in the same way. Search through CpuCoul->Vee and find the "vbcc.Vee" call in the VB region. I understand the CpuCoul may seem a bit complicated, but it is essentially a virtual machine that runs simplified assembly language optimized for AI.
+You can also run your VBC'c orders during runtime in the same way. Search through CpuCoul->Vee and find the "vbcc.Vee" call in the VB region.
+</br>I understand the CpuCoul may seem a bit complicated,
+</br>but it is a simple virtual machine that runs virtual machine code optimized for AI.
 
 Thus change the CpuCoul to be the virtual machine of your choice, and program it. Or learn to use ours, because we know what we're doing.
 
