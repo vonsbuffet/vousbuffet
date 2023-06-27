@@ -30,7 +30,7 @@ The Source files simply define these 4 functions for the class. After looking at
 
 # To Start
 
-Try creating a startup routine that initializes the VBC'c  vbcc.Be and vbcc.Vee calls, to create everything you need to get up and running.
+Try creating a startup routine that initializes your VBC'c using vbcc.Be and vbcc.Vee calls, to create everything you need to get up and running.
 </br>Start with an empty float array, and an iterator.
 </br>Look through the VBCc->Be branches to decide on what floats you need to make it do what you want.
 </br>Do The Same for VBCc->Vee branches. You can add this to a new array or the same one, depending on how you set up your boot routine (static array, read from file, etc.).
