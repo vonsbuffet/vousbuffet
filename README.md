@@ -68,7 +68,7 @@ You still use primitive technology? kk, our contact can use email: TheVoniestMic
 
 For best experience, use Android Studio, or any editor that supports code folding via: '//region' syntax.
 
-If you want us to add more ViB, eg. for traditional graphics programming, tools, tricks, etc. Contact us through your spirits.
+If you want us to add more ViB, eg. for graphics, tools, tricks, etc. Contact us through your spirits.
 
 VonsBuffet.ca
 </br>"You are the key."
