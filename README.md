@@ -34,8 +34,6 @@ Explore VBCc->Be branches to decide on what you need to make it do what you want
 
 Similarly, you can also run orders during runtime.
 </br>Search through CpuCoul->Vee and find the "vbcc.Vee" call in the VB region.
-</br>The CpuCoul may seem complicated,
-</br>but it's really simple virtual machine that runs virtual machine code optimized for AI.
 
 Very Fun!
 
