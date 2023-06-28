@@ -26,11 +26,7 @@ After a couple ViB, you will see a pattern that will help you learn the rest.
 
 # To Start
 
-Try creating a startup routine that initializes your VBC'c.
-
 Use vbcc.Be and vbcc.Vee calls, to create everything you need to get up and running.
-
-Start with a large 'empty' float array, and an iterator. (once you know your order, you will know how big to make the array)
 
 Explore VBCc->Be branches to decide on what floats you need to make it do what you want.
 </br>Explore VBCc->Vee branches the same way.
