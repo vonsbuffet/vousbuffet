@@ -62,7 +62,7 @@ If you need help unlocking it, please contact us through your spirits.
 
 :)
 
-You still use primitive technology? kk, our contact can use email: TheVoniestMichael@VonsBuffet.ca
+You still use ancient tech? kk, our contact can use email: TheVoniestMichael@VonsBuffet.ca
 
 # Extra Sauce
 
