@@ -28,13 +28,13 @@ After a couple ViB, you will see a pattern that will help you learn the rest.
 
 Use vbcc.Be and vbcc.Vee calls, to create everything you need to get up and running.
 
-Explore VBCc->Be branches to decide on what floats you need to make it do what you want.
-</br>Explore VBCc->Vee branches the same way.
+Explore VBCc->Be branches to decide on what you need to make it do what you want.
+</br>Explore VBCc->Vee the same way.
 </br>(Speed Tip: You will see a // F or // D or // P next to relevant points where you can order from. See Jeneral.cpp for the format.)
 
 Similarly, you can also run orders during runtime.
 </br>Search through CpuCoul->Vee and find the "vbcc.Vee" call in the VB region.
-</br>The CpuCoul may seem a bit complicated,
+</br>The CpuCoul may seem complicated,
 </br>but it's really simple virtual machine that runs virtual machine code optimized for AI.
 
 You can change the CpuCoul to be the virtual machine of your choice?
