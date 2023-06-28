@@ -37,10 +37,6 @@ Similarly, you can also run orders during runtime.
 </br>The CpuCoul may seem complicated,
 </br>but it's really simple virtual machine that runs virtual machine code optimized for AI.
 
-You can change the CpuCoul to be the virtual machine of your choice?
-</br>You can add a compiler ViB and jump to raw instructions with the CpuCoul?
-</br>You can learn to use our CpuCoul, and get super powers?
-
 Very Fun!
 
 # Explore 4 functions carefully.
