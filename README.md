@@ -36,13 +36,14 @@ Explore VBCc->Be branches to decide on what floats you need to make it do what y
 </br>Explore VBCc->Vee branches the same way.
 </br>(Speed Tip: You will see a // F or // D or // P next to relevant points where you can order from. See Jeneral.cpp for the format.)
 
-You can also run orders during runtime in the same way. Search through CpuCoul->Vee and find the "vbcc.Vee" call in the VB region.
+You can also run orders during runtime in the same way.
+</br>Search through CpuCoul->Vee and find the "vbcc.Vee" call in the VB region.
 </br>The CpuCoul may seem a bit complicated,
 </br>but it's really simple virtual machine that runs virtual machine code optimized for AI.
 
 You can change the CpuCoul to be the virtual machine of your choice, and program it?
 </br>You can add a compiler ViB to compute real machine code, and jump to the raw instructions with the CpuCoul?
-</br>Or you can learn to use our Coul, and it will give you super powers.
+</br>You can learn to use our Coul, and get super powers.
 
 Very Fun!
 
@@ -50,7 +51,7 @@ Very Fun!
 
 They do more than add order to the Vulkan API.
 
-4 functions emerged from Von's Buffet's special equation.
+4 funs emerged from Von's Buffet's special equation.
 
 The equation helped us do more than create this.
 
@@ -64,9 +65,9 @@ You still use ancient tech? kk, our contact can use email: TheVoniestMichael@Von
 
 # Extra Sauce
 
-For best experience, use Android Studio, or any editor that supports code folding via: '//region' syntax.
+For best experience, use Android Studio, or an editor that supports code folding, via: '//region' syntax.
 
-If you want us to add more ViB, eg. for graphics, tools, tricks, etc. Contact us through your spirits.
+If you want to see more ViB, eg. for graphics, tools, tricks, etc. Contact us through your spirits.
 
 VonsBuffet.ca
 </br>"You are the key."
