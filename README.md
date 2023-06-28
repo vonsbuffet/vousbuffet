@@ -36,14 +36,14 @@ Explore VBCc->Be branches to decide on what floats you need to make it do what y
 </br>Explore VBCc->Vee branches the same way.
 </br>(Speed Tip: You will see a // F or // D or // P next to relevant points where you can order from. See Jeneral.cpp for the format.)
 
-You can also run orders during runtime in the same way.
+Similarly, you can also run orders during runtime.
 </br>Search through CpuCoul->Vee and find the "vbcc.Vee" call in the VB region.
 </br>The CpuCoul may seem a bit complicated,
 </br>but it's really simple virtual machine that runs virtual machine code optimized for AI.
 
 You can change the CpuCoul to be the virtual machine of your choice, and program it?
 </br>You can add a compiler ViB to compute real machine code, and jump to the raw instructions with the CpuCoul?
-</br>You can learn to use our Coul, and get super powers.
+</br>You can learn to use our Coul, and get super powers?
 
 Very Fun!
 
@@ -75,7 +75,6 @@ VonsBuffet.ca
 # Smart Flex
 
 We are looking to reinforce the smartest brains on the planet.
-</br>The sooner we are united, the sooner we can take action on behalf of good and evil.
 </br>We are in this together. Everything has it's place. No1 needs to die.
 
 (Perhaps, maybe, an alien or 2... aha >:)
