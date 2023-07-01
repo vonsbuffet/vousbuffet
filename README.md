@@ -51,8 +51,6 @@ If you need help unlocking it, please contact us through your spirits.
 
 :)
 
-You use ancient tech? kk, our contact can use email: TheVoniestMichael@VonsBuffet.ca
-
 # Extra Sauce
 
 For best experience, use Android Studio, or an editor that supports code folding, via: '//region' syntax.
