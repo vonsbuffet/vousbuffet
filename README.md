@@ -47,7 +47,7 @@ The equation helped us do more than create this.
 
 We have studied the equation excessively, and this code is indeed a starting point to do more with the equation.
 
-If you need help unlocking it, please contact us through your spirits.
+If you need help unlocking it, please, contact us through your spirits.
 
 :)
 
